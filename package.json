@@ -8,7 +8,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "commitlint": "commitlint -e $GIT_PARAMS",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "^13.1.1",
