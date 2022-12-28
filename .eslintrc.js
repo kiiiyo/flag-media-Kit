@@ -12,9 +12,11 @@ module.exports = {
     'prettier'
   ],
   overrides: [],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    project: './tsconfig.json'
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {}
