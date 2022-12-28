@@ -1,0 +1,32 @@
+# dependencies
+
+/node_modules
+
+# testing
+
+/coverage
+
+# production
+
+/dist
+/build
+/.firebase
+
+# misc
+
+.DS_Store
+\*.pem
+
+# debug
+
+npm-debug.log\*
+
+# typescript
+
+\*.tsbuildinfo
+
+# Logs
+
+logs
+_.log
+npm-debug.log_
