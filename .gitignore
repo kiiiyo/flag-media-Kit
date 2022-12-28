@@ -1,32 +1,37 @@
-# dependencies
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# dependencies
 /node_modules
 
 # testing
-
 /coverage
 
-# production
+# next.js
+/.next/
+/out/
 
+# production
 /dist
 /build
-/.firebase
 
 # misc
-
 .DS_Store
 \*.pem
 
 # debug
-
 npm-debug.log\*
 
-# typescript
+# local env files
+.env*.local
 
+# vercel
+.vercel
+
+# typescript
 \*.tsbuildinfo
+next-env.d.ts
 
 # Logs
-
 logs
 _.log
 npm-debug.log_

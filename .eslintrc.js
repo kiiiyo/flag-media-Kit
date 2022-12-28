@@ -4,12 +4,18 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript', 'prettier'],
+  extends: [
+    'next/core-web-vitals',
+    'plugin:react/recommended',
+    'standard-with-typescript',
+    'plugin:react/jsx-runtime',
+    'prettier'
+  ],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react', '@typescript-eslint'],
   rules: {}
 }
