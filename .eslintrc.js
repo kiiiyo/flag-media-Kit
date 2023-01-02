@@ -7,7 +7,6 @@ module.exports = {
   extends: [
     'next',
     'next/core-web-vitals',
-    'standard-with-typescript',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:storybook/recommended',
@@ -16,6 +15,9 @@ module.exports = {
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.json'
