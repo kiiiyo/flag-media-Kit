@@ -7,9 +7,11 @@ module.exports = {
   extends: [
     'next',
     'next/core-web-vitals',
+    'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
+    'plugin:@typescript-eslint/recommended',
     'prettier'
   ],
   overrides: [],
@@ -22,6 +24,14 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json'
   },
-  plugins: ['react', '@typescript-eslint'],
-  rules: {}
+  plugins: ['react', '@typescript-eslint', 'import'],
+  rules: {
+    /* Enable Rules*/
+    /* Disable Rules */
+    'react/react-in-jsx-scope': 'off',
+    'import/extensions': ['off'],
+    'import/no-extraneous-dependencies': ['off'],
+    'import/no-unresolved': ['off'],
+    'import/prefer-default-export': ['off']
+  }
 }
