@@ -5,10 +5,12 @@ module.exports = {
     node: true
   },
   extends: [
+    'next',
     'next/core-web-vitals',
-    'plugin:react/recommended',
     'standard-with-typescript',
+    'plugin:react/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:storybook/recommended',
     'prettier'
   ],
   overrides: [],
