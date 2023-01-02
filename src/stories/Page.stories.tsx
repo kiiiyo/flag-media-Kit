@@ -1,4 +1,4 @@
-import { ComponentStoryObj, ComponentMeta } from '@storybook/react'
+import { ComponentMeta, ComponentStoryObj } from '@storybook/react'
 import { Page } from './Page'
 
 type Meta = ComponentMeta<typeof Page>
