@@ -1,3 +1,4 @@
+import * as styles from './Page.css'
 export const Page = () => {
-  return <div>Example</div>
+  return <div className={styles.text}>Example</div>
 }
