@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import * as styles from './sample.css'
+import * as styles from '@/styles/sample.css'
 
 import { useThemeContext } from '@/features/context'
 
