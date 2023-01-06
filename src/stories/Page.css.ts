@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
 
 export const text = style({
-  color: '#000'
+  color: 'red'
 })
