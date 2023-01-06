@@ -56,7 +56,6 @@
   },
   "lint-staged": {
     "./src/**/*.{js,jsx,ts,tsx}": [
-      "prettier -c .prettierrc.js -w",
       "eslint -c .eslintrc.js --fix"
     ]
   }
