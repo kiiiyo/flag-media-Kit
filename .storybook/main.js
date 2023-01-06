@@ -1,5 +1,4 @@
 const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin')
-const { merge } = require('webpack-merge')
 
 module.exports = {
   typescript: { reactDocgen: false },
@@ -13,8 +12,8 @@ module.exports = {
   core: {
     builder: '@storybook/builder-webpack5'
   },
-  webpackFinal: async (config) =>
-    merge(config, {
-      plugins: [new VanillaExtractPlugin()]
-    })
+  webpackFinal: async (config) => {
+    config.plugins = [...config.plugins, new VanillaExtractPlugin()]
+    return config
+  }
 }
