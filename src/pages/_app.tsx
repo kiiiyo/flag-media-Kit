@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
 
+import { ThemeContextProvider } from '@/features/context/'
+
 import 'sanitize.css'
-import '@/styles/app.css'
+import '@/styles/global.css'
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +15,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
       </Head>
-      <Component {...pageProps} />
+      <ThemeContextProvider>
+        <Component {...pageProps} />
+      </ThemeContextProvider>
     </>
   )
 }
