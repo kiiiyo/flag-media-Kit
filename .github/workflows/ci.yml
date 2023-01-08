@@ -1,5 +1,5 @@
 # prettier-ignore
-name: Validate
+name: CI
 
 on: [pull_request]
   
