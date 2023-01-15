@@ -57,5 +57,5 @@ export const useThemeContext = (): ThemeContextValue => {
   return {
     colorMode,
     handleChangeColorMode
-  }
+  } as const
 }
