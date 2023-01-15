@@ -19,5 +19,15 @@ export const lightTheme = createTheme(themeToken, {
     color: {
       default: PALETTE.gray800
     }
+  },
+  button: {
+    regular: {
+      backgroundColor: {
+        default: PALETTE.white,
+        hover: PALETTE.gray100,
+        focus: PALETTE.gray100,
+        active: PALETTE.gray100
+      }
+    }
   }
 })

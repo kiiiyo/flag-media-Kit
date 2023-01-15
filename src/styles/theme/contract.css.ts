@@ -17,5 +17,15 @@ export const themeToken = createThemeContract({
     color: {
       default: null
     }
+  },
+  button: {
+    regular: {
+      backgroundColor: {
+        default: null,
+        hover: null,
+        focus: null,
+        active: null
+      }
+    }
   }
 })

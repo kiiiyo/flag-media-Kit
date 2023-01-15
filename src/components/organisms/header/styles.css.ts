@@ -9,7 +9,7 @@ export const root = style({
 })
 
 export const container = style({
-  maxWidth: globalToken.screens.medium,
+  maxWidth: globalToken.screens.large,
   margin: `0 auto`,
   padding: `0 16px`
 })
@@ -22,7 +22,6 @@ export const inner = style({
 
 export const brandContainer = style({
   display: 'flex',
-  justifyContent: 'start',
   alignItems: 'center',
   minHeight: 64
 })
@@ -49,7 +48,15 @@ export const actionContainer = style({
 
 export const actionButton = style({
   border: 'none',
-  background: 'none'
+  background: 'none',
+  cursor: 'pointer',
+  width: 40,
+  height: 40,
+  borderRadius: 20,
+  backgroundColor: themeToken.button.regular.backgroundColor.default,
+  ':hover': {
+    backgroundColor: themeToken.button.regular.backgroundColor.hover
+  }
 })
 
 export const actionIcon = style({

@@ -20,5 +20,15 @@ export const darkTheme = createTheme(themeToken, {
     color: {
       default: PALETTE.white
     }
+  },
+  button: {
+    regular: {
+      backgroundColor: {
+        default: PALETTE.gray700,
+        hover: PALETTE.gray800,
+        focus: PALETTE.gray800,
+        active: PALETTE.gray800
+      }
+    }
   }
 })
