@@ -1,3 +1,4 @@
+import * as styles from './styles.css'
 import { ReactNode, Fragment } from 'react'
 
 type Props = {
@@ -10,8 +11,8 @@ export const GeneralTemplate = ({ header, footer, children }: Props) => {
   return (
     <Fragment>
       {header && <div>{header}</div>}
-      <div>
-        <main>{children}</main>
+      <div className={styles.container}>
+        <main className={styles.inner}>{children}</main>
       </div>
       {footer && <div>{footer}</div>}
     </Fragment>
