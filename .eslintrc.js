@@ -12,8 +12,13 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:mdx/recommended',
     'prettier'
   ],
+  settings: {
+    'mdx/code-blocks': true,
+    'mdx/language-mapper': {}
+  },
   overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
