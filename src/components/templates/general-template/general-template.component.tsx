@@ -11,8 +11,8 @@ export const GeneralTemplate = ({ header, footer, children }: Props) => {
   return (
     <Fragment>
       {header && <div>{header}</div>}
-      <div className={styles.container}>
-        <main className={styles.inner}>{children}</main>
+      <div className={styles.wrapper}>
+        <main className={styles.container}>{children}</main>
       </div>
       {footer && <div>{footer}</div>}
     </Fragment>

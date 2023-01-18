@@ -5,7 +5,12 @@ import { PALETTE } from './tokens'
 export const lightTheme = createTheme(themeToken, {
   font: {
     color: {
-      default: PALETTE.gray800
+      default: PALETTE.gray800,
+      subtle: PALETTE.gray500,
+      subtlest: PALETTE.gray300,
+      disable: PALETTE.gray800,
+      inset: PALETTE.gray800,
+      inverse: PALETTE.gray800
     }
   },
   background: {
@@ -18,6 +23,11 @@ export const lightTheme = createTheme(themeToken, {
   iconography: {
     color: {
       default: PALETTE.gray800
+    }
+  },
+  border: {
+    color: {
+      default: PALETTE.gray200
     }
   },
   button: {

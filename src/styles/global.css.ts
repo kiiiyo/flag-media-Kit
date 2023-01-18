@@ -7,11 +7,11 @@ globalStyle('body', {
 })
 
 globalStyle('.light > body', {
-  backgroundColor: globalToken.palette.gray100,
+  backgroundColor: globalToken.palette.white,
   color: globalToken.palette.gray800
 })
 
 globalStyle('.dark > body', {
-  backgroundColor: globalToken.palette.black,
+  backgroundColor: globalToken.palette.gray800,
   color: globalToken.palette.white
 })

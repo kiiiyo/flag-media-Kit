@@ -3,6 +3,16 @@ import { createThemeContract } from '@vanilla-extract/css'
 export const themeToken = createThemeContract({
   font: {
     color: {
+      default: null,
+      subtle: null,
+      subtlest: null,
+      disable: null,
+      inset: null,
+      inverse: null
+    }
+  },
+  border: {
+    color: {
       default: null
     }
   },
