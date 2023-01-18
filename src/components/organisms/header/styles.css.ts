@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { themeToken, globalToken } from '@/styles/theme/'
+import { themeToken, globalToken } from '@/styles/theme'
 
 export const root = style({
   position: 'static',
@@ -32,7 +32,7 @@ export const brandSymbol = style({
 })
 
 export const brandName = style({
-  fontSize: 18,
+  fontSize: 24,
   fontWeight: 'bold'
 })
 

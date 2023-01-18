@@ -1,10 +1,10 @@
-import * as styles from './styles.css'
 import {
   MagnifyingGlassIcon,
   SunIcon,
   MoonIcon
 } from '@heroicons/react/24/solid'
 
+import * as styles from './styles.css'
 import { useHeaderPresenter } from './header.presenter'
 
 export const Header = () => {
