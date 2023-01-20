@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css'
-import { semanticToken, globalToken } from '@/styles/theme'
+
+import { globalToken, semanticToken } from '@/styles/theme'
 import { mediaQueries } from '@/styles/utils'
 
 export const root = style({

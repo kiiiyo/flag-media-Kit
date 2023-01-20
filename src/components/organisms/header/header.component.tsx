@@ -1,11 +1,11 @@
 import {
   MagnifyingGlassIcon,
-  SunIcon,
-  MoonIcon
+  MoonIcon,
+  SunIcon
 } from '@heroicons/react/24/solid'
 
-import * as styles from './styles.css'
 import { useHeaderPresenter } from './header.presenter'
+import * as styles from './styles.css'
 
 export const Header = () => {
   const { colorMode, handleChangeColorMode } = useHeaderPresenter()

@@ -1,4 +1,4 @@
-import { Templates, Organisms } from '@/components'
+import { Organisms, Templates } from '@/components'
 
 export const HomePage = () => {
   return (

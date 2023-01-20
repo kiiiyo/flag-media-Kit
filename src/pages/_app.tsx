@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import type { AppProps } from 'next/app'
-
-import { ThemeContextProvider } from '@/features/context/'
-
 import 'sanitize.css'
 import '@/styles/global.css'
+
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
+
+import { ThemeContextProvider } from '@/features/context/'
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (

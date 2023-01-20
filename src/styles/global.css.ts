@@ -1,4 +1,5 @@
 import { globalStyle } from '@vanilla-extract/css'
+
 import { globalToken } from '@/styles/theme'
 
 globalStyle('body', {

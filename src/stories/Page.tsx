@@ -1,5 +1,6 @@
-import * as styles from './Page.css'
 import { BeakerIcon } from '@heroicons/react/24/solid'
+
+import * as styles from './Page.css'
 
 export const Page = () => {
   return (
