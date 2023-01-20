@@ -1,42 +1,42 @@
 import { createTheme } from '@vanilla-extract/css'
-import { themeToken } from './contract.css'
-import { PALETTE } from './tokens'
+import { semanticToken } from './contract.css'
+import { palette } from './tokens'
 
-export const lightTheme = createTheme(themeToken, {
+export const lightTheme = createTheme(semanticToken, {
   font: {
     color: {
-      default: PALETTE.gray800,
-      subtle: PALETTE.gray500,
-      subtlest: PALETTE.gray300,
-      disable: PALETTE.gray800,
-      inset: PALETTE.gray800,
-      inverse: PALETTE.gray800
+      default: palette.gray800,
+      subtle: palette.gray500,
+      subtlest: palette.gray300,
+      disable: palette.gray800,
+      inset: palette.gray800,
+      inverse: palette.gray800
     }
   },
   background: {
     color: {
-      base: PALETTE.gray100,
-      layer1: PALETTE.gray50,
-      layer2: PALETTE.white
+      base: palette.gray100,
+      layer1: palette.gray50,
+      layer2: palette.white
     }
   },
   iconography: {
     color: {
-      default: PALETTE.gray800
+      default: palette.gray800
     }
   },
   border: {
     color: {
-      default: PALETTE.gray200
+      default: palette.gray200
     }
   },
   button: {
     regular: {
       backgroundColor: {
-        default: PALETTE.white,
-        hover: PALETTE.gray100,
-        focus: PALETTE.gray100,
-        active: PALETTE.gray100
+        default: palette.white,
+        hover: palette.gray100,
+        focus: palette.gray100,
+        active: palette.gray100
       }
     }
   }

@@ -1,9 +1,9 @@
 import { style } from '@vanilla-extract/css'
-import { themeToken, globalToken } from '@/styles/theme'
+import { semanticToken, globalToken } from '@/styles/theme'
 import { mediaQueries } from '@/styles/utils'
 
 export const root = style({
-  backgroundColor: themeToken.background.color.layer2
+  backgroundColor: semanticToken.background.color.layer2
 })
 
 export const container = style({
@@ -69,7 +69,7 @@ export const brandDescription = style({
 export const menuTitle = style({
   fontWeight: 'bold',
   fontSize: 16,
-  color: themeToken.font.color.subtle,
+  color: semanticToken.font.color.subtle,
   marginTop: globalToken.spacing.medium,
   marginBottom: globalToken.spacing.medium
 })
@@ -86,10 +86,10 @@ export const menuItem = style({
 
 export const menuItemAnker = style({
   ':any-link': {
-    color: themeToken.font.color.default
+    color: semanticToken.font.color.default
   },
   ':hover': {
-    color: themeToken.font.color.subtle
+    color: semanticToken.font.color.subtle
   }
 })
 
@@ -107,9 +107,9 @@ export const copyrightText = style({
 
 export const copyrightAnker = style({
   ':any-link': {
-    color: themeToken.font.color.default
+    color: semanticToken.font.color.default
   },
   ':hover': {
-    color: themeToken.font.color.subtle
+    color: semanticToken.font.color.subtle
   }
 })

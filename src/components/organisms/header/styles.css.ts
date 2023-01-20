@@ -1,11 +1,11 @@
 import { style } from '@vanilla-extract/css'
-import { themeToken, globalToken } from '@/styles/theme'
+import { semanticToken, globalToken } from '@/styles/theme'
 
 export const root = style({
   position: 'static',
   top: 0,
   zIndex: 10,
-  backgroundColor: themeToken.background.color.layer2
+  backgroundColor: semanticToken.background.color.layer2
 })
 
 export const container = style({
@@ -53,13 +53,13 @@ export const actionButton = style({
   width: 40,
   height: 40,
   borderRadius: 20,
-  backgroundColor: themeToken.button.regular.backgroundColor.default,
+  backgroundColor: semanticToken.button.regular.backgroundColor.default,
   ':hover': {
-    backgroundColor: themeToken.button.regular.backgroundColor.hover
+    backgroundColor: semanticToken.button.regular.backgroundColor.hover
   }
 })
 
 export const actionIcon = style({
-  color: themeToken.iconography.color.default,
+  color: semanticToken.iconography.color.default,
   width: 24
 })

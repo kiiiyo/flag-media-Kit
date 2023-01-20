@@ -1,8 +1,8 @@
 import { style } from '@vanilla-extract/css'
-import { themeToken, globalToken } from '@/styles/theme/'
+import { semanticToken, globalToken } from '@/styles/theme/'
 
 export const wrapper = style({
-  backgroundColor: themeToken.background.color.base
+  backgroundColor: semanticToken.background.color.base
 })
 
 export const container = style({
