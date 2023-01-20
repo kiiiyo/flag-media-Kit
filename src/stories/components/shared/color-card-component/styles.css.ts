@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css'
+
 import { globalToken } from '@/styles/theme'
 
 export const root = style({

@@ -29,14 +29,20 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json'
   },
-  plugins: ['react', '@typescript-eslint', 'import'],
+  plugins: ['react', '@typescript-eslint', 'simple-import-sort', 'import'],
   rules: {
     /* Enable Rules*/
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'import/first': 'error',
+    'import/no-unresolved': 'error',
+    'import/no-duplicates': 'error',
+
     /* Disable Rules */
     'react/react-in-jsx-scope': 'off',
-    'import/extensions': ['off'],
-    'import/no-extraneous-dependencies': ['off'],
-    'import/no-unresolved': ['off'],
-    'import/prefer-default-export': ['off']
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+    'no-duplicate-imports': 'off'
   }
 }

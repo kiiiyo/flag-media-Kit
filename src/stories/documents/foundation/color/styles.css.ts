@@ -1,6 +1,7 @@
 import { style } from '@vanilla-extract/css'
-import { mediaQueries } from '@/styles/utils'
+
 import { globalToken } from '@/styles/theme'
+import { mediaQueries } from '@/styles/utils'
 
 export const root = style({
   maxWidth: globalToken.screens.large,

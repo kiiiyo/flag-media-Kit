@@ -1,5 +1,6 @@
 import { ColorCard } from '@/stories/components'
 import { palette } from '@/styles/theme/tokens'
+
 import * as styles from './styles.css'
 
 const gray = [

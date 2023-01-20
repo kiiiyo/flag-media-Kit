@@ -1,6 +1,6 @@
-import * as styles from './styles.css'
-
 import { Divider } from '@/components/atoms'
+
+import * as styles from './styles.css'
 
 export const Footer = () => {
   return (

@@ -1,4 +1,5 @@
 import { createTheme } from '@vanilla-extract/css'
+
 import { semanticToken } from './contract.css'
 import { palette } from './tokens'
 
