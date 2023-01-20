@@ -1,6 +1,6 @@
 import { GRID, toPixel } from '../utils'
 
-export const SPACING = {
+export const spacing = {
   none: '0',
   xsmall: toPixel(1 * GRID),
   small: toPixel(2 * GRID),

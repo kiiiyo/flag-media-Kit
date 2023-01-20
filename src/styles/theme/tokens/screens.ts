@@ -1,4 +1,4 @@
-export const SCREENS = {
+export const screens = {
   /* Mobile */
   small: '640px',
   /* Tablet */
@@ -10,13 +10,3 @@ export const SCREENS = {
   /* Wide Screen */
   xxlarge: '1536px'
 }
-
-// type MediaQueries = Record<keyof typeof SCREENS, Record<string, string>>
-
-// export const MEDIA_QUERIES: MediaQueries = Object.entries(SCREENS).reduce(
-//   (mergeObj, [key, value]) => ({
-//     ...mergeObj,
-//     [key]: { '@media': `screen and (min-width: ${value})` }
-//   }),
-//   {} as MediaQueries
-// )

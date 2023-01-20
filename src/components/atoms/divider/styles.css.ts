@@ -1,8 +1,8 @@
 import { style } from '@vanilla-extract/css'
-import { themeToken } from '@/styles/theme'
+import { semanticToken } from '@/styles/theme'
 
 export const root = style({
   height: 1,
   border: 'none',
-  backgroundColor: themeToken.border.color.default
+  backgroundColor: semanticToken.border.color.default
 })
