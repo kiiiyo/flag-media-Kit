@@ -1,8 +1,12 @@
 import {
+  FolderIcon,
   MagnifyingGlassIcon,
   MoonIcon,
-  SunIcon
+  SunIcon,
+  TagIcon
 } from '@heroicons/react/24/solid'
+
+import { Divider } from '@/components/atoms'
 
 import { useHeaderPresenter } from './header.presenter'
 import * as styles from './styles.css'
@@ -19,9 +23,16 @@ export const Header = () => {
             <div className={styles.brandName}>FlagMediaKit</div>
           </div>
           <div className={styles.actionContainer}>
-            <button className={styles.actionButton}>
+            <a href="#" className={styles.actionButton}>
               <MagnifyingGlassIcon className={styles.actionIcon} />
-            </button>
+            </a>
+            <a href="#" className={styles.actionButton}>
+              <TagIcon className={styles.actionIcon} />
+            </a>
+            <a href="#" className={styles.actionButton}>
+              <FolderIcon className={styles.actionIcon} />
+            </a>
+            <Divider kind="vertical" />
             <button
               className={styles.actionButton}
               onClick={() => {

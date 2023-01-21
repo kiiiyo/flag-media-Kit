@@ -4,7 +4,7 @@ import { globalToken, semanticToken } from '@/styles/theme'
 import { mediaQueries } from '@/styles/utils'
 
 export const root = style({
-  backgroundColor: semanticToken.background.color.layer2
+  backgroundColor: semanticToken.surface.default.bgColor.normal
 })
 
 export const container = style({

@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css'
 import { globalToken, semanticToken } from '@/styles/theme/'
 
 export const wrapper = style({
-  backgroundColor: semanticToken.background.color.base
+  backgroundColor: semanticToken.surface.sunken.bgColor.normal
 })
 
 export const container = style({

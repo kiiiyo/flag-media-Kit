@@ -14,16 +14,9 @@ export const lightTheme = createTheme(semanticToken, {
       inverse: palette.gray900
     }
   },
-  background: {
-    color: {
-      base: palette.gray200,
-      layer1: palette.gray100,
-      layer2: palette.white
-    }
-  },
   iconography: {
     color: {
-      default: palette.gray900
+      default: palette.gray600
     }
   },
   border: {
@@ -31,13 +24,26 @@ export const lightTheme = createTheme(semanticToken, {
       default: palette.gray300
     }
   },
+  surface: {
+    default: {
+      bgColor: {
+        normal: palette.white,
+        hovered: palette.gray200,
+        pressed: palette.gray300
+      }
+    },
+    sunken: {
+      bgColor: {
+        normal: palette.gray200
+      }
+    }
+  },
   button: {
-    regular: {
-      backgroundColor: {
-        default: palette.white,
-        hover: palette.gray200,
-        focus: palette.gray200,
-        active: palette.gray200
+    default: {
+      bgColor: {
+        normal: palette.white,
+        hovered: palette.gray200,
+        pressed: palette.gray300
       }
     }
   }

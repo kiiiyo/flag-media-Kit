@@ -14,13 +14,13 @@ export const darkTheme = createTheme(semanticToken, {
       inverse: palette.white
     }
   },
-  background: {
-    color: {
-      base: palette.black,
-      layer1: palette.gray1000,
-      layer2: palette.gray900
-    }
-  },
+  // background: {
+  //   color: {
+  //     base: palette.black,
+  //     layer1: palette.gray1000,
+  //     layer2: palette.gray900
+  //   }
+  // },
   iconography: {
     color: {
       default: palette.white
@@ -31,13 +31,26 @@ export const darkTheme = createTheme(semanticToken, {
       default: palette.gray700
     }
   },
+  surface: {
+    default: {
+      bgColor: {
+        normal: palette.gray900,
+        hovered: palette.gray900,
+        pressed: palette.gray900
+      }
+    },
+    sunken: {
+      bgColor: {
+        normal: palette.black
+      }
+    }
+  },
   button: {
-    regular: {
-      backgroundColor: {
-        default: palette.gray800,
-        hover: palette.gray900,
-        focus: palette.gray900,
-        active: palette.gray900
+    default: {
+      bgColor: {
+        normal: palette.gray900,
+        hovered: palette.gray800,
+        pressed: palette.gray700
       }
     }
   }
