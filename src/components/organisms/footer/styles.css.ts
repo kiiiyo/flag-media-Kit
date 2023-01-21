@@ -14,7 +14,7 @@ export const container = style({
   marginLeft: 'auto',
   marginRight: 'auto',
   paddingTop: 0,
-  paddingBottom: 0,
+  paddingBottom: globalToken.spacing.xlarge,
   paddingLeft: globalToken.spacing.medium,
   paddingRight: globalToken.spacing.medium
 })
