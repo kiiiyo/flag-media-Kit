@@ -6,38 +6,38 @@ import { palette } from './tokens'
 export const lightTheme = createTheme(semanticToken, {
   font: {
     color: {
-      default: palette.gray800,
-      subtle: palette.gray500,
-      subtlest: palette.gray300,
-      disable: palette.gray800,
-      inset: palette.gray800,
-      inverse: palette.gray800
+      default: palette.gray900,
+      subtle: palette.gray600,
+      subtlest: palette.gray400,
+      disable: palette.gray900,
+      inset: palette.gray900,
+      inverse: palette.gray900
     }
   },
   background: {
     color: {
-      base: palette.gray100,
-      layer1: palette.gray50,
+      base: palette.gray200,
+      layer1: palette.gray100,
       layer2: palette.white
     }
   },
   iconography: {
     color: {
-      default: palette.gray800
+      default: palette.gray900
     }
   },
   border: {
     color: {
-      default: palette.gray200
+      default: palette.gray300
     }
   },
   button: {
     regular: {
       backgroundColor: {
         default: palette.white,
-        hover: palette.gray100,
-        focus: palette.gray100,
-        active: palette.gray100
+        hover: palette.gray200,
+        focus: palette.gray200,
+        active: palette.gray200
       }
     }
   }

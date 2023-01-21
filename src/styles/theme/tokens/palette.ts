@@ -3,14 +3,14 @@ export const palette = {
   black: '#000',
 
   /* Gray */
-  gray50: '#fafafa',
-  gray100: '#f5f5f5',
-  gray200: '#e5e5e5',
-  gray300: '#d4d4d4',
-  gray400: '#a3a3a3',
-  gray500: '#737373',
-  gray600: '#525252',
-  gray700: '#404040',
-  gray800: '#262626',
-  gray900: '#171717'
+  gray100: '#fafafa',
+  gray200: '#f5f5f5',
+  gray300: '#e5e5e5',
+  gray400: '#d4d4d4',
+  gray500: '#a3a3a3',
+  gray600: '#737373',
+  gray700: '#525252',
+  gray800: '#404040',
+  gray900: '#262626',
+  gray1000: '#171717'
 }

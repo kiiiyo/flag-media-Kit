@@ -5,10 +5,6 @@ import * as styles from './styles.css'
 
 const gray = [
   {
-    name: 'Gray50',
-    hex: palette.gray50
-  },
-  {
     name: 'Gray100',
     hex: palette.gray100
   },
@@ -43,6 +39,10 @@ const gray = [
   {
     name: 'Gray900',
     hex: palette.gray900
+  },
+  {
+    name: 'Gray1000',
+    hex: palette.gray1000
   }
 ]
 
