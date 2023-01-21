@@ -7,8 +7,8 @@ export const darkTheme = createTheme(semanticToken, {
   font: {
     color: {
       default: palette.white,
-      subtle: palette.gray400,
-      subtlest: palette.gray600,
+      subtle: palette.gray500,
+      subtlest: palette.gray700,
       disable: palette.white,
       inset: palette.white,
       inverse: palette.white
@@ -17,8 +17,8 @@ export const darkTheme = createTheme(semanticToken, {
   background: {
     color: {
       base: palette.black,
-      layer1: palette.gray900,
-      layer2: palette.gray800
+      layer1: palette.gray1000,
+      layer2: palette.gray900
     }
   },
   iconography: {
@@ -28,16 +28,16 @@ export const darkTheme = createTheme(semanticToken, {
   },
   border: {
     color: {
-      default: palette.gray600
+      default: palette.gray700
     }
   },
   button: {
     regular: {
       backgroundColor: {
-        default: palette.gray700,
-        hover: palette.gray800,
-        focus: palette.gray800,
-        active: palette.gray800
+        default: palette.gray800,
+        hover: palette.gray900,
+        focus: palette.gray900,
+        active: palette.gray900
       }
     }
   }
