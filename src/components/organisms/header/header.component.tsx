@@ -5,6 +5,7 @@ import {
   SunIcon,
   TagIcon
 } from '@heroicons/react/24/solid'
+import Link from 'next/link'
 
 import { Divider } from '@/components/atoms'
 
@@ -18,20 +19,22 @@ export const Header = () => {
       <div className={styles.container}>
         <div className={styles.inner}>
           {/* Brand */}
-          <div className={styles.brandContainer}>
-            <div className={styles.brandSymbol}>🏁</div>
-            <div className={styles.brandName}>FlagMediaKit</div>
-          </div>
+          <Link href="/" className={styles.brandAnker}>
+            <div className={styles.brandContainer}>
+              <div className={styles.brandSymbol}>🏁</div>
+              <div className={styles.brandName}>FlagMediaKit</div>
+            </div>
+          </Link>
           <div className={styles.actionContainer}>
-            <a href="#" className={styles.actionButton}>
+            <Link href="/search" className={styles.actionButton}>
               <MagnifyingGlassIcon className={styles.actionIcon} />
-            </a>
-            <a href="#" className={styles.actionButton}>
-              <TagIcon className={styles.actionIcon} />
-            </a>
-            <a href="#" className={styles.actionButton}>
+            </Link>
+            <Link href="#" className={styles.actionButton}>
               <FolderIcon className={styles.actionIcon} />
-            </a>
+            </Link>
+            <Link href="#" className={styles.actionButton}>
+              <TagIcon className={styles.actionIcon} />
+            </Link>
             <Divider kind="vertical" />
             <button
               className={styles.actionButton}
