@@ -9,6 +9,9 @@ export const SearchPage = () => {
       <Atoms.Skeleton kind="pink" style={{ height: '320px' }}>
         Search Form
       </Atoms.Skeleton>
+      <Atoms.Skeleton kind="blue" style={{ height: '320px' }}>
+        Search Result Pane
+      </Atoms.Skeleton>
     </Templates.SingleColumnTemplate>
   )
 }
