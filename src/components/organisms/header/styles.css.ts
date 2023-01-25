@@ -50,6 +50,13 @@ export const brandName = style({
   }
 })
 
+export const brandAnker = style({
+  ':any-link': {
+    textDecoration: 'none',
+    color: semanticToken.font.color.default
+  }
+})
+
 /* Actions Style */
 
 export const actionContainer = style({

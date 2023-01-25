@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 
+import { Pages } from '@/components'
+
 const SearchPage: NextPage = () => {
-  return <div>SearchPage</div>
+  return <Pages.SearchPage />
 }
 
 export default SearchPage
