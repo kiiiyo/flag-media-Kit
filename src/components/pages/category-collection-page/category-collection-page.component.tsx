@@ -1,16 +1,16 @@
 import { Atoms, Organisms, Templates } from '@/components'
 
-export const SearchPage = () => {
+export const CategoryCollectionPage = () => {
   return (
     <Templates.SingleColumnTemplate
       headerPane={<Organisms.Header />}
       footerPane={<Organisms.Footer />}
     >
-      <Atoms.Skeleton kind="pink" style={{ height: '320px' }}>
-        Search Form
+      <Atoms.Skeleton kind="blue" style={{ height: '160px' }}>
+        Page Header
       </Atoms.Skeleton>
-      <Atoms.Skeleton kind="blue" style={{ height: '320px', marginTop: 24 }}>
-        Search Result Pane
+      <Atoms.Skeleton kind="pink" style={{ height: '320px', marginTop: 24 }}>
+        Category List
       </Atoms.Skeleton>
     </Templates.SingleColumnTemplate>
   )
