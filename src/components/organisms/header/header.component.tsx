@@ -29,10 +29,10 @@ export const Header = () => {
             <Link href="/search" className={styles.actionButton}>
               <MagnifyingGlassIcon className={styles.actionIcon} />
             </Link>
-            <Link href="#" className={styles.actionButton}>
+            <Link href="/categories" className={styles.actionButton}>
               <FolderIcon className={styles.actionIcon} />
             </Link>
-            <Link href="#" className={styles.actionButton}>
+            <Link href="/tags" className={styles.actionButton}>
               <TagIcon className={styles.actionIcon} />
             </Link>
             <Divider kind="vertical" />
