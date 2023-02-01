@@ -17,6 +17,7 @@ module.exports = (phase, { defaultConfig }) => {
           }
     },
     images: {
+      domains: ['picsum.photos'],
       // next export では画像の最適化が使えないので無効にする
       unoptimized: true
     },
