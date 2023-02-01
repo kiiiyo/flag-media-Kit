@@ -4,7 +4,8 @@ import {
   useCallback,
   useContext,
   useEffect,
-  useState} from 'react'
+  useState
+} from 'react'
 
 import { darkTheme, lightTheme } from '@/styles/theme'
 
@@ -23,16 +24,17 @@ const initContextValue: ThemeContextValue = {
 export const ThemeContext = createContext<ThemeContextValue>(initContextValue)
 
 export const ThemeContextProvider = ({
-  children
+  children,
+  mode
 }: {
-  colorMode?: ColorMode
+  mode?: ColorMode
   children: ReactNode
 }) => {
-  const [colorMode, setColorMode] = useState<ColorMode | null>(null)
+  const [colorMode, setColorMode] = useState<ColorMode | null>(mode ?? null)
 
   useEffect(() => {
     setColorMode(
-      document.documentElement.classList.contains('light') ? 'light' : 'dark'
+      document.documentElement.classList.contains('dark') ? 'dark' : 'light'
     )
   }, [])
 
