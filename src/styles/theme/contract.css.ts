@@ -13,7 +13,9 @@ export const semanticToken = createThemeContract({
   },
   border: {
     color: {
-      default: null
+      default: null,
+      subtle: null,
+      subtlest: null
     }
   },
   iconography: {

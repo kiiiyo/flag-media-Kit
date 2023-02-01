@@ -28,7 +28,9 @@ export const darkTheme = createTheme(semanticToken, {
   },
   border: {
     color: {
-      default: palette.gray700
+      default: palette.gray700,
+      subtle: palette.gray700,
+      subtlest: palette.gray700
     }
   },
   surface: {

@@ -21,7 +21,9 @@ export const lightTheme = createTheme(semanticToken, {
   },
   border: {
     color: {
-      default: palette.gray300
+      default: palette.gray300,
+      subtle: palette.gray200,
+      subtlest: palette.gray100
     }
   },
   surface: {
