@@ -1,6 +1,7 @@
 import { style } from '@vanilla-extract/css'
 
 import { globalToken, semanticToken } from '@/styles/theme'
+import { mediaQueries } from '@/styles/utils'
 
 export const article = style({
   marginTop: globalToken.spacing.xlarge,
@@ -14,14 +15,27 @@ export const article = style({
 })
 
 export const inner = style({
-  display: 'flex'
+  display: 'flex',
+  flexDirection: 'column',
+  '@media': {
+    [mediaQueries.mobile]: {
+      flexDirection: 'row'
+    }
+  }
 })
 
 export const articleImageWrapper = style({
   display: 'block',
   position: 'relative',
-  width: 200,
-  height: 134
+  width: '100%',
+  height: 200,
+
+  '@media': {
+    [mediaQueries.mobile]: {
+      width: 200,
+      height: 134
+    }
+  }
 })
 
 export const articleImage = style({
@@ -32,7 +46,14 @@ export const articleBody = style({
   display: 'flex',
   flexDirection: 'column',
   gap: globalToken.spacing.xsmall,
-  paddingLeft: globalToken.spacing.medium
+  marginTop: globalToken.spacing.medium,
+  paddingLeft: 0,
+  '@media': {
+    [mediaQueries.mobile]: {
+      marginTop: 0,
+      paddingLeft: globalToken.spacing.medium
+    }
+  }
 })
 
 export const articleCategory = style({
