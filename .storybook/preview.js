@@ -1,3 +1,5 @@
+import { ThemeContextProvider } from '@/features/context/'
+
 import * as NextImage from 'next/image'
 
 const OriginalNextImage = NextImage.default
@@ -16,3 +18,11 @@ export const parameters = {
     }
   }
 }
+
+export const decorators = [
+  (Story) => (
+    <ThemeContextProvider>
+      <Story />
+    </ThemeContextProvider>
+  )
+]
