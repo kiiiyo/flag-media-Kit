@@ -13,12 +13,12 @@ export const Footer = () => {
               <div className={styles.brandSymbol}>🏁</div>
               <div className={styles.brandName}>FlagMediaKit</div>
             </div>
-            <p className={styles.brandDescription}>Description</p>
+            <p className={styles.brandDescription}>サイトの概要</p>
           </div>
 
-          <div>
+          <nav className={styles.menuGroup}>
             <h3 className={styles.menuTitle}>Menu</h3>
-            <ul className={styles.menuGroup}>
+            <ul className={styles.menuList}>
               <li className={styles.menuItem}>
                 <a href="#" className={styles.menuItemAnker}>
                   ホーム
@@ -40,13 +40,13 @@ export const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-          <div>
+          </nav>
+          <nav className={styles.menuGroup}>
             <h3 className={styles.menuTitle}>About</h3>
-            <ul className={styles.menuGroup}>
+            <ul className={styles.menuList}>
               <li className={styles.menuItem}>
                 <a href="#" className={styles.menuItemAnker}>
-                  FlagMediaKit について
+                  サイトについて
                 </a>
               </li>
               <li className={styles.menuItem}>
@@ -55,10 +55,10 @@ export const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
-          <div>
+          </nav>
+          <nav className={styles.menuGroup}>
             <h3 className={styles.menuTitle}>Legal</h3>
-            <ul className={styles.menuGroup}>
+            <ul className={styles.menuList}>
               <li className={styles.menuItem}>
                 <a href="#" className={styles.menuItemAnker}>
                   利用規約
@@ -70,7 +70,7 @@ export const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
         </div>
         <Divider />
         <div className={styles.copyrightContainer}>

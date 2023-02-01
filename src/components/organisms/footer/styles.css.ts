@@ -22,13 +22,13 @@ export const container = style({
 /* Navigation */
 
 export const navigationContainer = style({
-  paddingTop: globalToken.spacing.xlarge,
-  paddingBottom: globalToken.spacing.xlarge,
+  paddingTop: globalToken.spacing.xxlarge,
+  paddingBottom: globalToken.spacing.xxlarge,
   display: 'grid',
-  gap: globalToken.spacing.xlarge,
+  gap: globalToken.spacing.xxlarge,
   '@media': {
     [mediaQueries.tablet]: {
-      gridTemplateColumns: 'repeat(5,minmax(0,1fr))'
+      gridTemplateColumns: 'repeat(4,minmax(0,1fr))'
     }
   }
 })
@@ -36,7 +36,12 @@ export const navigationContainer = style({
 /* Brand */
 
 export const brandContainer = style({
-  gridColumn: 'span 2/span 2'
+  display: 'none',
+  '@media': {
+    [mediaQueries.tablet]: {
+      display: 'block'
+    }
+  }
 })
 
 export const brandGroup = style({
@@ -45,20 +50,20 @@ export const brandGroup = style({
 })
 
 export const brandSymbol = style({
-  width: 48,
-  height: 48,
+  width: 32,
+  height: 32,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   // TODO: Setup token
-  fontSize: 32,
+  fontSize: 24,
   marginRight: 4
 })
 
 export const brandName = style({
   fontWeight: 'bold',
   // TODO: Setup token
-  fontSize: 24
+  fontSize: 16
 })
 
 export const brandDescription = style({
@@ -67,22 +72,36 @@ export const brandDescription = style({
 
 /* Menu */
 
-export const menuTitle = style({
-  fontWeight: 'bold',
-  fontSize: 16,
-  color: semanticToken.font.color.subtle,
-  marginTop: globalToken.spacing.medium,
-  marginBottom: globalToken.spacing.medium
+export const menuGroup = style({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: globalToken.spacing.small,
+  '@media': {
+    [mediaQueries.tablet]: {
+      gap: globalToken.spacing.medium
+    }
+  }
 })
 
-export const menuGroup = style({
+export const menuTitle = style({
+  fontWeight: 'bold',
+  fontSize: 14,
+  color: semanticToken.font.color.subtle,
+  marginTop: 0,
+  marginBottom: 0
+})
+
+export const menuList = style({
   margin: 0,
   padding: 0,
-  listStyle: 'none'
+  listStyle: 'none',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: globalToken.spacing.small
 })
 
 export const menuItem = style({
-  marginTop: globalToken.spacing.small
+  margin: 0
 })
 
 export const menuItemAnker = style({
