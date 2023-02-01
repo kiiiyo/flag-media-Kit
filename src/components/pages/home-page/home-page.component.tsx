@@ -2,6 +2,8 @@ import Link from 'next/link'
 
 import { Atoms, Organisms, Templates } from '@/components'
 
+import { mockArticleCollection } from '../../organisms/article-collection/testing/'
+
 export const HomePage = () => {
   return (
     <Templates.RegularTemplate
@@ -39,11 +41,7 @@ export const HomePage = () => {
         </>
       }
     >
-      <Link href="/articles/slag">
-        <Atoms.Skeleton kind="pink" style={{ height: '1240px' }}>
-          Article Collection
-        </Atoms.Skeleton>
-      </Link>
+      <Organisms.ArticleCollection articles={mockArticleCollection} />
       <Atoms.Skeleton kind="blue" style={{ height: '40px', marginTop: 24 }}>
         Pagination
       </Atoms.Skeleton>
