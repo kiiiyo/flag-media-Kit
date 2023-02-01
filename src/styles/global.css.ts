@@ -13,6 +13,6 @@ globalStyle('.light > body', {
 })
 
 globalStyle('.dark > body', {
-  backgroundColor: globalToken.palette.gray800,
+  backgroundColor: globalToken.palette.gray900,
   color: globalToken.palette.white
 })

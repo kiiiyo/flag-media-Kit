@@ -4,10 +4,11 @@ import { globalToken, semanticToken } from '@/styles/theme'
 import { mediaQueries } from '@/styles/utils'
 
 export const root = style({
-  position: 'static',
+  position: 'sticky',
   top: 0,
   zIndex: 10,
-  backgroundColor: semanticToken.surface.default.bgColor.normal
+  backgroundColor: semanticToken.surface.default.bgColor.normal,
+  boxShadow: globalToken.shadow.shadow200
 })
 
 export const container = style({

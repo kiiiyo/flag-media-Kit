@@ -35,8 +35,8 @@ export const darkTheme = createTheme(semanticToken, {
     default: {
       bgColor: {
         normal: palette.gray900,
-        hovered: palette.gray900,
-        pressed: palette.gray900
+        hovered: palette.gray800,
+        pressed: palette.gray1000
       }
     },
     sunken: {

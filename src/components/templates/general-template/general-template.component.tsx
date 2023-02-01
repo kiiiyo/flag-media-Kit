@@ -3,19 +3,23 @@ import { Fragment, ReactNode } from 'react'
 import * as styles from './styles.css'
 
 type Props = {
-  header?: ReactNode
-  footer?: ReactNode
+  headerPane?: ReactNode
+  footerPane?: ReactNode
   children: ReactNode
 }
 
-export const GeneralTemplate = ({ header, footer, children }: Props) => {
+export const GeneralTemplate = ({
+  headerPane,
+  footerPane,
+  children
+}: Props) => {
   return (
     <Fragment>
-      {header && <div>{header}</div>}
+      {headerPane && headerPane}
       <div className={styles.wrapper}>
         <main className={styles.container}>{children}</main>
       </div>
-      {footer && <div>{footer}</div>}
+      {footerPane && footerPane}
     </Fragment>
   )
 }

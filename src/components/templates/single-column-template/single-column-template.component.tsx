@@ -16,7 +16,7 @@ export const SingleColumnTemplate = ({
 }: Props) => {
   return (
     <Fragment>
-      {headerPane && <div>{headerPane}</div>}
+      {headerPane && headerPane}
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.inner}>
@@ -24,7 +24,7 @@ export const SingleColumnTemplate = ({
           </div>
         </div>
       </div>
-      {footerPane && <div>{footerPane}</div>}
+      {footerPane && footerPane}
     </Fragment>
   )
 }
