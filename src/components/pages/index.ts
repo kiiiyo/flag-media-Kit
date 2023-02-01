@@ -1,3 +1,4 @@
+export * from './article-page'
 export * from './category-collection-page'
 export * from './category-single-page'
 export * from './home-page'

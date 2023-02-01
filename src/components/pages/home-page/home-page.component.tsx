@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { Atoms, Organisms, Templates } from '@/components'
 
 export const HomePage = () => {
@@ -37,9 +39,11 @@ export const HomePage = () => {
         </>
       }
     >
-      <Atoms.Skeleton kind="pink" style={{ height: '1240px' }}>
-        Article Collection
-      </Atoms.Skeleton>
+      <Link href="/articles/slag">
+        <Atoms.Skeleton kind="pink" style={{ height: '1240px' }}>
+          Article Collection
+        </Atoms.Skeleton>
+      </Link>
       <Atoms.Skeleton kind="blue" style={{ height: '40px', marginTop: 24 }}>
         Pagination
       </Atoms.Skeleton>
