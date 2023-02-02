@@ -9,7 +9,7 @@ export const lightTheme = createTheme(semanticToken, {
       default: palette.gray900,
       subtle: palette.gray600,
       subtlest: palette.gray400,
-      disable: palette.gray900,
+      disable: palette.gray400,
       inset: palette.gray900,
       inverse: palette.gray900
     }
