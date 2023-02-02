@@ -42,9 +42,9 @@ export const HomePage = () => {
       }
     >
       <Organisms.ArticleCollection articles={mockArticleCollection} />
-      <Atoms.Skeleton kind="blue" style={{ height: '40px', marginTop: 24 }}>
-        Pagination
-      </Atoms.Skeleton>
+      <div style={{ marginTop: 40 }}>
+        <Organisms.Pagination isDisableNext={true} isDisablePrevious={true} />
+      </div>
     </Templates.RegularTemplate>
   )
 }

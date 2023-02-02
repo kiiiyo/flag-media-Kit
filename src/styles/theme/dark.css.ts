@@ -9,7 +9,7 @@ export const darkTheme = createTheme(semanticToken, {
       default: palette.white,
       subtle: palette.gray500,
       subtlest: palette.gray700,
-      disable: palette.white,
+      disable: palette.gray700,
       inset: palette.white,
       inverse: palette.white
     }
