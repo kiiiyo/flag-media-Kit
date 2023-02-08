@@ -1,4 +1,4 @@
-import { Atoms, Organisms, Templates } from '@/components'
+import { Organisms, Templates } from '@/components'
 
 import { mockArticleCollection } from '../../organisms/article-collection/testing/'
 
@@ -10,12 +10,9 @@ export const HomePage = () => {
       asidePane={
         <>
           <Organisms.AsideShare />
-          <Atoms.Skeleton
-            kind="blue"
-            style={{ height: '320px', marginTop: 24 }}
-          >
-            Topic Article
-          </Atoms.Skeleton>
+          <div style={{ marginTop: 24 }}>
+            <Organisms.AsideTopic articles={mockArticleCollection} />
+          </div>
 
           <div style={{ marginTop: 24 }}>
             <Organisms.AsideCategory />
