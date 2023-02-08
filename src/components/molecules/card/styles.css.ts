@@ -39,6 +39,7 @@ export const cardHeaderTitle = style({
 
 export const cardHeaderIcon = style({
   display: 'flex',
+  justifyContent: 'flex-start',
   // FIXME:
   ':first-child': {
     width: 16,
@@ -64,6 +65,7 @@ export const cardContent = style({
 export const cardFooter = style({
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'flex-start',
   paddingTop: globalToken.spacing.small,
   paddingBottom: globalToken.spacing.medium,
   minHeight: 24,
