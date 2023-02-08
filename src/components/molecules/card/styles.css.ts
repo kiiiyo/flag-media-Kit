@@ -6,14 +6,7 @@ export const root = style({
   backgroundColor: semanticToken.surface.default.bgColor.normal,
   boxShadow: globalToken.shadow.shadow100,
   minHeight: 96,
-  ':first-child': {
-    borderTopRightRadius: 4,
-    borderTopLeftRadius: 4
-  },
-  ':last-child': {
-    borderBottomRightRadius: 4,
-    borderBottomLeftRadius: 4
-  }
+  borderRadius: 4
 })
 
 /*
@@ -26,7 +19,7 @@ export const cardHeader = style({
   paddingTop: globalToken.spacing.medium,
   paddingBottom: globalToken.spacing.small,
   minHeight: 24,
-  gap: globalToken.spacing.xsmall,
+  gap: globalToken.spacing.small,
   paddingLeft: globalToken.spacing.medium,
   paddingRight: globalToken.spacing.medium
 })
@@ -42,7 +35,7 @@ export const cardHeaderIcon = style({
   justifyContent: 'flex-start',
   // FIXME:
   ':first-child': {
-    width: 16,
+    width: 20,
     color: semanticToken.iconography.color.default
   }
 })

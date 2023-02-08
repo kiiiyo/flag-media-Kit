@@ -16,12 +16,10 @@ export const HomePage = () => {
           >
             Topic Article
           </Atoms.Skeleton>
-          <Atoms.Skeleton
-            kind="blue"
-            style={{ height: '320px', marginTop: 24 }}
-          >
-            Category
-          </Atoms.Skeleton>
+
+          <div style={{ marginTop: 24 }}>
+            <Organisms.AsideCategory />
+          </div>
         </>
       }
     >
