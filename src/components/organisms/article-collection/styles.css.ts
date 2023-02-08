@@ -82,7 +82,7 @@ export const articleTitleAnker = style({
 
 export const articleMeta = style({
   display: 'flex',
-  justifyContent: 'start',
+  justifyContent: 'flex-start',
   alignItems: 'center',
   gap: globalToken.spacing.small,
   height: 20
@@ -99,7 +99,7 @@ export const articleDate = style({
 
 export const articleUser = style({
   display: 'flex',
-  justifyContent: 'start',
+  justifyContent: 'flex-start',
   alignItems: 'center'
 })
 
