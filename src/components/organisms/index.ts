@@ -1,4 +1,5 @@
 export * from './article-collection'
+export * from './aside-share'
 export * from './footer'
 export * from './header'
 export * from './pagination'

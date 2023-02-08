@@ -37,6 +37,8 @@ module.exports = {
     'import/first': 'error',
     'import/no-unresolved': 'error',
     'import/no-duplicates': 'error',
+    'no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
 
     /* Disable Rules */
     'react/react-in-jsx-scope': 'off',
