@@ -13,6 +13,7 @@ type ColorMode = 'dark' | 'light'
 
 type ThemeContextValue = {
   colorMode: ColorMode | null
+  // eslint-disable-next-line no-unused-vars
   handleChangeColorMode?: (colorMode: ColorMode) => void
 }
 

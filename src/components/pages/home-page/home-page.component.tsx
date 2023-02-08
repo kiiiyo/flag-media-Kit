@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import { Atoms, Organisms, Templates } from '@/components'
 
 import { mockArticleCollection } from '../../organisms/article-collection/testing/'
@@ -11,15 +9,7 @@ export const HomePage = () => {
       footerPane={<Organisms.Footer />}
       asidePane={
         <>
-          <Atoms.Skeleton kind="blue" style={{ height: '240px' }}>
-            Ad Banner
-          </Atoms.Skeleton>
-          <Atoms.Skeleton
-            kind="blue"
-            style={{ height: '160px', marginTop: 24 }}
-          >
-            Share
-          </Atoms.Skeleton>
+          <Organisms.AsideShare />
           <Atoms.Skeleton
             kind="blue"
             style={{ height: '320px', marginTop: 24 }}
@@ -31,12 +21,6 @@ export const HomePage = () => {
             style={{ height: '320px', marginTop: 24 }}
           >
             Category
-          </Atoms.Skeleton>
-          <Atoms.Skeleton
-            kind="blue"
-            style={{ height: '160px', marginTop: 24 }}
-          >
-            Hash Tags
           </Atoms.Skeleton>
         </>
       }
