@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css'
+import { ComplexStyleRule, style } from '@vanilla-extract/css'
 
 import { globalToken, semanticToken } from '@/styles/theme'
 import { mediaQueries } from '@/styles/utils'
@@ -72,8 +72,12 @@ export const articleCategoryAnker = style({
 export const articleTitle = style({
   margin: 0,
   fontSize: 16,
-  lineHeight: 1.5
-})
+  lineHeight: 1.5,
+  display: '-webkit-box',
+  overflow: 'hidden',
+  WebkitBoxOrient: 'vertical',
+  WebkitLineClamp: 2
+} as ComplexStyleRule)
 
 export const articleTitleAnker = style({
   textDecoration: 'none',
