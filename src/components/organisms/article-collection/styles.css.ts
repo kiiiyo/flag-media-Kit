@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css'
+import { ComplexStyleRule, style } from '@vanilla-extract/css'
 
 import { globalToken, semanticToken } from '@/styles/theme'
 import { mediaQueries } from '@/styles/utils'
@@ -39,7 +39,8 @@ export const articleImageWrapper = style({
 })
 
 export const articleImage = style({
-  borderRadius: 4
+  borderRadius: 4,
+  objectFit: 'cover'
 })
 
 export const articleBody = style({
@@ -71,8 +72,12 @@ export const articleCategoryAnker = style({
 export const articleTitle = style({
   margin: 0,
   fontSize: 16,
-  lineHeight: 1.5
-})
+  lineHeight: 1.5,
+  display: '-webkit-box',
+  overflow: 'hidden',
+  WebkitBoxOrient: 'vertical',
+  WebkitLineClamp: 2
+} as ComplexStyleRule)
 
 export const articleTitleAnker = style({
   textDecoration: 'none',
@@ -117,6 +122,7 @@ export const articleUserName = style({
 
 export const articleTagGroup = style({
   display: 'flex',
+  flexWrap: 'wrap',
   paddingTop: globalToken.spacing.small,
   gap: globalToken.spacing.small
 })
