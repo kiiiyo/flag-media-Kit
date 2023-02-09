@@ -39,7 +39,8 @@ export const articleImageWrapper = style({
 })
 
 export const articleImage = style({
-  borderRadius: 4
+  borderRadius: 4,
+  objectFit: 'cover'
 })
 
 export const articleBody = style({
@@ -117,6 +118,7 @@ export const articleUserName = style({
 
 export const articleTagGroup = style({
   display: 'flex',
+  flexWrap: 'wrap',
   paddingTop: globalToken.spacing.small,
   gap: globalToken.spacing.small
 })
