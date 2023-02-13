@@ -1,6 +1,6 @@
-import { Article } from '../types'
+import { Article } from '@/features/domain'
 
-export const mockArticleCollection: Article[] = [
+export const mockArticleCollection: Article.Entity[] = [
   {
     id: 1,
     slug: 'mock-article-001',
