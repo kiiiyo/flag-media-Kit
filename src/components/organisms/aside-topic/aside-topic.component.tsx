@@ -3,12 +3,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Molecules } from '@/components'
+import { Article } from '@/features/domain'
 
 import * as styles from './styles.css'
-import { Article } from './types'
 
 type Props = {
-  articles?: Article[]
+  articles?: Article.Entity[]
 }
 
 export const AsideTopic = ({ articles }: Props) => {
