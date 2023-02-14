@@ -7,7 +7,7 @@ export function NoImage() {
   return (
     <div className={styles.root}>
       <PhotoIcon className={styles.icon} />
-      <div className={styles.text}>NoImage</div>
+      <div className={styles.text}>No Image</div>
     </div>
   )
 }

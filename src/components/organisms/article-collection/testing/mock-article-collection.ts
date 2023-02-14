@@ -100,5 +100,19 @@ export const mockArticleCollection: Article.Entity[] = [
         name: 'タグC'
       }
     ]
+  },
+  {
+    id: 4,
+    slug: 'mock-article-004',
+    title: 'テキスト',
+    category: {
+      id: 1,
+      slug: 'category-slug-c',
+      name: 'カテゴリーC'
+    },
+    description: '',
+    createdAt: '2022-05-23T12:40:40.529Z',
+    updatedAt: '2022-05-23T12:40:40.529Z',
+    publishedAt: '2022-05-23T12:40:40.529Z'
   }
 ]

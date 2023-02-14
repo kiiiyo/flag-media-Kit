@@ -9,8 +9,11 @@ export const root = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: semanticToken.surface.sunken.bgColor.normal,
+  backgroundColor: semanticToken.surface.default.bgColor.normal,
   gap: globalToken.spacing.xsmall,
+  borderStyle: 'solid',
+  borderWidth: 1,
+  borderColor: semanticToken.border.color.default,
   borderRadius: 4
 })
 
@@ -21,5 +24,7 @@ export const icon = style({
 
 export const text = style({
   color: semanticToken.font.color.default,
-  fontSize: 12
+  fontSize: 12,
+  fontWeight: 'normal',
+  textDecoration: 'none'
 })

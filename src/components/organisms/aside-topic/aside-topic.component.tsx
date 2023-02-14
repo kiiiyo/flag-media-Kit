@@ -23,7 +23,7 @@ export const AsideTopic = ({ articles }: Props) => {
                   href={`/articles/${article.slug}`}
                   className={styles.topicAnker}
                 >
-                  {article.image && (
+                  {article.image ? (
                     <span className={styles.topicImageContainer}>
                       <Image
                         src={article.image.url}
@@ -31,6 +31,10 @@ export const AsideTopic = ({ articles }: Props) => {
                         layout="fill"
                         className={styles.topicImage}
                       />
+                    </span>
+                  ) : (
+                    <span className={styles.topicImageContainer}>
+                      <Molecules.NoImage />
                     </span>
                   )}
 
