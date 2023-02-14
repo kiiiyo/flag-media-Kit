@@ -24,6 +24,10 @@ export const inner = style({
   }
 })
 
+export const articleImageAnker = style({
+  textDecoration: 'none'
+})
+
 export const articleImageWrapper = style({
   display: 'block',
   position: 'relative',

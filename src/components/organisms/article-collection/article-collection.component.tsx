@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Divider } from '@/components/atoms'
+import { NoImage } from '@/components/molecules'
 import { Article } from '@/features/domain'
 
 import * as styles from './styles.css'
@@ -21,21 +22,24 @@ export const ArticleCollection = ({ articles }: Props) => {
         return (
           <article key={id} className={styles.article}>
             <div className={styles.inner}>
-              <div>
-                {image && (
-                  <Link
-                    href={`/articles/${slug}`}
-                    className={styles.articleImageWrapper}
-                  >
+              <Link
+                href={`/articles/${slug}`}
+                className={styles.articleImageAnker}
+              >
+                <div className={styles.articleImageWrapper}>
+                  {image ? (
                     <Image
                       src={image.url}
                       alt={image.alt}
                       className={styles.articleImage}
                       fill
                     />
-                  </Link>
-                )}
-              </div>
+                  ) : (
+                    <NoImage />
+                  )}
+                </div>
+              </Link>
+
               <div className={styles.articleBody}>
                 {category && (
                   <p className={styles.articleCategory}>
