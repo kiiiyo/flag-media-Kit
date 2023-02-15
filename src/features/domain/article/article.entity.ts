@@ -3,6 +3,7 @@ import { Author, Category, Image, Tag } from '../../domain'
 /**
  * Article Entity
  */
+
 export type Entity = {
   //FIXME:
   readonly id: string | number
@@ -17,5 +18,16 @@ export type Entity = {
   //FIXME:
   readonly createdAt: string
   readonly updatedAt: string
-  readonly publishedAt: string
+  readonly publishedAt?: string
+}
+
+/**
+ * Article Collection Response
+ */
+
+export type CollectionResponse = {
+  articles: Entity[]
+  totalCount: number
+  offset: number
+  limit: number
 }
