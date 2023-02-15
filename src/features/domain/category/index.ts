@@ -1,1 +1,1 @@
-export * as Category from './entity'
+export * as Category from './category.entity'

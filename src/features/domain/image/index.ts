@@ -1,1 +1,1 @@
-export * as Image from './entity'
+export * as Image from './image.entity'

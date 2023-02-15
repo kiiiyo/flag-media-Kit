@@ -1,1 +1,1 @@
-export * as Tag from './entity'
+export * as Tag from './tag.entity'
