@@ -1,13 +1,3 @@
-// import type { NextPage, InferGetStaticPropsType, GetStaticPaths, GetStaticProps } from 'next'
-// import { ParsedUrlQuery } from 'node:querystring'
-// import ErrorPage from 'next/error'
-// //
-// import { Domain, Context, Usecase } from '@/features'
-// import { Pages } from '@/components'
-// import { getLocale, UnknownLocale } from '@/utils/translations/locales'
-
-// type TBearSinglePageProps = InferGetStaticPropsType<typeof getStaticProps>
-
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 
 import { Pages } from '@/components'
