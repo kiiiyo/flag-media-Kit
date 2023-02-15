@@ -69,9 +69,6 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    env:
-      MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
-      MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
     strategy:
       matrix:
         node: ['18']
@@ -100,6 +97,9 @@ jobs:
 
       - name: Build packages
         run: npm run build
+        env:
+          MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
+          MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
 
   build-storybook:
     name: Build Storybook
