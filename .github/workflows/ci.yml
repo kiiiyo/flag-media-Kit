@@ -66,41 +66,40 @@ jobs:
       - name: Test
         run: npm run test
   
-  # FIXME:
-  # build:
-  #   name: Build
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     matrix:
-  #       node: ['18']
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v3
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['18']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       
-  #     - name: Set up Node.js
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 18
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-  #     - name: Set up cache
-  #       uses: actions/cache@v3
-  #       id: node_modules_cache_id
-  #       env:
-  #         cache-name: cache-node-modules
-  #       with:
-  #         path: '**/node_modules'
-  #         key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+      - name: Set up cache
+        uses: actions/cache@v3
+        id: node_modules_cache_id
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
 
-  #     - run: echo '${{ toJSON(steps.node_modules_cache_id.outputs) }}'
+      - run: echo '${{ toJSON(steps.node_modules_cache_id.outputs) }}'
 
-  #     - if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
-  #       run: npm ci
+      - if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+        run: npm ci
 
-  #     - name: Build packages
-  #       run: npm run build
-  #       env:
-  #         MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
-  #         MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
+      - name: Build packages
+        run: npm run build
+        env:
+          MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
+          MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
 
   build-storybook:
     name: Build Storybook
