@@ -3,6 +3,10 @@ name: CI
 
 on: [pull_request]
 
+env:
+  MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
+  MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
+
 jobs:
   lint:
     name: Lint
@@ -97,9 +101,6 @@ jobs:
 
       - name: Build packages
         run: npm run build
-        env:
-          MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
-          MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
 
   build-storybook:
     name: Build Storybook
