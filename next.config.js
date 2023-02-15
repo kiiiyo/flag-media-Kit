@@ -16,6 +16,10 @@ module.exports = (phase, { defaultConfig }) => {
             exclude: ['error']
           }
     },
+    env: {
+      MICROCMS_SERVICE_DOMAIN: process.env.MICROCMS_SERVICE_DOMAIN,
+      MICROCMS_API_KEY: process.env.MICROCMS_API_KEY
+    },
     images: {
       domains: ['picsum.photos'],
       // next export では画像の最適化が使えないので無効にする

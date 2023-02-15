@@ -1,1 +1,1 @@
-export * as Article from './entity'
+export * as Article from './article.entity'

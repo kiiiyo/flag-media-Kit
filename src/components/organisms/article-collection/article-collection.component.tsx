@@ -57,9 +57,11 @@ export const ArticleCollection = ({ articles }: Props) => {
                   </Link>
                 </h1>
                 <div className={styles.articleMeta}>
-                  <p className={styles.articleDate}>
-                    <time>{format(new Date(publishedAt), 'yyyy.MM.dd')}</time>
-                  </p>
+                  {publishedAt && (
+                    <p className={styles.articleDate}>
+                      <time>{format(new Date(publishedAt), 'yyyy.MM.dd')}</time>
+                    </p>
+                  )}
                   {author && (
                     <>
                       <Divider kind="vertical" style={{ margin: 0 }} />
