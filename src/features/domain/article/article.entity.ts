@@ -5,17 +5,15 @@ import { Author, Category, Image, Tag } from '../../domain'
  */
 
 export type Entity = {
-  //FIXME:
-  readonly id: string | number
+  readonly id: string
   readonly slug: string
   readonly title: string
-  readonly description: string
+  readonly description?: string | null
   //FIXME:
-  readonly image?: Image.Entity
-  readonly category?: Category.Entity
+  readonly image?: Image.Entity | null
+  readonly category?: Category.Entity | null
   readonly tags?: Tag.Entity[]
   readonly author?: Author.Entity
-  //FIXME:
   readonly createdAt: string
   readonly updatedAt: string
   readonly publishedAt?: string

@@ -5,12 +5,12 @@ import Link from 'next/link'
 
 import { Divider } from '@/components/atoms'
 import { NoImage } from '@/components/molecules'
-import { Article } from '@/features/domain'
+import { Domain } from '@/features'
 
 import * as styles from './styles.css'
 
 type Props = {
-  articles: Article.Entity[]
+  articles: Domain.Article.Entity[]
 }
 
 export const ArticleCollection = ({ articles }: Props) => {
@@ -39,7 +39,6 @@ export const ArticleCollection = ({ articles }: Props) => {
                   )}
                 </div>
               </Link>
-
               <div className={styles.articleBody}>
                 {category && (
                   <p className={styles.articleCategory}>
