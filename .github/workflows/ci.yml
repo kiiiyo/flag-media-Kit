@@ -66,7 +66,6 @@ jobs:
       - name: Test
         run: npm run test
   
-  # FIXME:
   # build:
   #   name: Build
   #   runs-on: ubuntu-latest
