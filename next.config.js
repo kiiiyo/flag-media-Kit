@@ -17,8 +17,8 @@ module.exports = (phase, { defaultConfig }) => {
           }
     },
     env: {
-      MICROCMS_SERVICE_DOMAIN: process.env.MICROCMS_SERVICE_DOMAIN,
-      MICROCMS_API_KEY: process.env.MICROCMS_API_KEY
+      CONTENT_API_DOMAIN: process.env.CONTENT_API_DOMAIN,
+      CONTENT_API_KEY: process.env.CONTENT_API_KEY
     },
     images: {
       domains: ['picsum.photos', 'images.microcms-assets.io'],
