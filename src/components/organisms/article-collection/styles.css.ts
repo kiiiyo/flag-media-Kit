@@ -36,8 +36,8 @@ export const articleImageWrapper = style({
 
   '@media': {
     [mediaQueries.mobile]: {
-      width: 200,
-      height: 134
+      width: 128,
+      height: 128
     }
   }
 })

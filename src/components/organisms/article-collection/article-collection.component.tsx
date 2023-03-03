@@ -17,8 +17,16 @@ export const ArticleCollection = ({ articles }: Props) => {
   return (
     <>
       {articles.map((article) => {
-        const { id, image, slug, title, category, tags, author, publishedAt } =
-          article
+        const {
+          id,
+          imageUrl,
+          slug,
+          title,
+          category,
+          tags,
+          author,
+          publishedAt
+        } = article
         return (
           <article key={id} className={styles.article}>
             <div className={styles.inner}>
@@ -27,10 +35,10 @@ export const ArticleCollection = ({ articles }: Props) => {
                 className={styles.articleImageAnker}
               >
                 <div className={styles.articleImageWrapper}>
-                  {image ? (
+                  {imageUrl ? (
                     <Image
-                      src={image.url}
-                      alt={image.alt}
+                      src={imageUrl}
+                      alt={title}
                       className={styles.articleImage}
                       fill
                     />

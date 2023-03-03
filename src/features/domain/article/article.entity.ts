@@ -1,4 +1,4 @@
-import { Author, Category, Image, Tag } from '../../domain'
+import { Author, Category, Tag } from '../../domain'
 
 /**
  * Article Entity
@@ -10,7 +10,7 @@ export type Entity = {
   readonly title: string
   readonly description?: string | null
   //FIXME:
-  readonly image?: Image.Entity | null
+  readonly imageUrl?: string
   readonly category?: Category.Entity | null
   readonly tags?: Tag.Entity[]
   readonly author?: Author.Entity
