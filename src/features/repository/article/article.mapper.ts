@@ -1,6 +1,5 @@
 import { Domain } from '@/features'
 import { categoryMapper } from '@/features/repository/category'
-import { imageMapper } from '@/features/repository/image'
 import { tagMapper } from '@/features/repository/tag'
 import type { ArticleContent } from '@/libs/client/microcms/types'
 
@@ -19,9 +18,7 @@ export function articleMapper(contents: Args): Domain.Article.Entity[] {
       author: {
         name: '執筆者'
       },
-      image: content.image
-        ? imageMapper({ url: content.image.url, alt: content.title })
-        : null,
+      imageUrl: content.imageUrl || undefined,
       createdAt: content.createdAt,
       updatedAt: content.updatedAt,
       publishedAt: content.publishedAt
