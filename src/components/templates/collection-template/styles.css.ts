@@ -4,6 +4,7 @@ import { globalToken, semanticToken } from '@/styles/theme'
 import { mediaQueries } from '@/styles/utils'
 
 export const pageHeaderWrapper = style({
+  position: 'relative',
   backgroundColor: semanticToken.surface.default.bgColor.normal,
   boxShadow: globalToken.shadow.shadow100
 })

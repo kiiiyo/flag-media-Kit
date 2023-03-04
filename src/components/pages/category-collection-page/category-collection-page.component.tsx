@@ -1,7 +1,6 @@
 import { FolderIcon } from '@heroicons/react/24/solid'
-import Link from 'next/link'
 
-import { Atoms, Organisms, Templates } from '@/components'
+import { Organisms, Templates } from '@/components'
 
 export const CategoryCollectionPage = () => {
   return (
@@ -12,11 +11,7 @@ export const CategoryCollectionPage = () => {
         <Organisms.CollectionPageHeader title="分類" icon={<FolderIcon />} />
       }
     >
-      <Link href="/categories/slag">
-        <Atoms.Skeleton kind="pink" style={{ height: '320px' }}>
-          Category List
-        </Atoms.Skeleton>
-      </Link>
+      <Organisms.CategoryCollection />
     </Templates.CollectionTemplate>
   )
 }
