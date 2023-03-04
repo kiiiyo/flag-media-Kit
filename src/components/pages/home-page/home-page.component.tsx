@@ -13,9 +13,7 @@ export const HomePage = ({ articles }: Props) => {
       asidePane={
         <>
           <Organisms.AsideTopic articles={mockArticleCollection} />
-          <div style={{ marginTop: 24 }}>
-            <Organisms.AsideShare />
-          </div>
+          <Organisms.AsideShare />
         </>
       }
     >
