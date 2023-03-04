@@ -1,21 +1,17 @@
-import Link from 'next/link'
+import { FolderIcon } from '@heroicons/react/24/solid'
 
-import { Atoms, Organisms, Templates } from '@/components'
+import { Organisms, Templates } from '@/components'
 
 export const CategoryCollectionPage = () => {
   return (
-    <Templates.SingleColumnTemplate
+    <Templates.CollectionTemplate
       headerPane={<Organisms.Header />}
       footerPane={<Organisms.Footer />}
+      pageHeader={
+        <Organisms.CollectionPageHeader title="分類" icon={<FolderIcon />} />
+      }
     >
-      <Atoms.Skeleton kind="blue" style={{ height: '160px' }}>
-        Page Header
-      </Atoms.Skeleton>
-      <Link href="/categories/slag">
-        <Atoms.Skeleton kind="pink" style={{ height: '320px', marginTop: 24 }}>
-          Category List
-        </Atoms.Skeleton>
-      </Link>
-    </Templates.SingleColumnTemplate>
+      <Organisms.CategoryCollection />
+    </Templates.CollectionTemplate>
   )
 }

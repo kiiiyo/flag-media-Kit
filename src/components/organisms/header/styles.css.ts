@@ -8,7 +8,7 @@ export const root = style({
   top: 0,
   zIndex: 10,
   backgroundColor: semanticToken.surface.default.bgColor.normal,
-  boxShadow: globalToken.shadow.shadow200
+  boxShadow: globalToken.shadow.shadow300
 })
 
 export const container = style({
