@@ -23,11 +23,11 @@ export const AsideTopic = ({ articles }: Props) => {
                   href={`/articles/${article.slug}`}
                   className={styles.topicAnker}
                 >
-                  {article.image ? (
+                  {article.imageUrl ? (
                     <span className={styles.topicImageContainer}>
                       <Image
-                        src={article.image.url}
-                        alt={article.image.alt}
+                        src={article.imageUrl}
+                        alt={article.title}
                         layout="fill"
                         className={styles.topicImage}
                       />
