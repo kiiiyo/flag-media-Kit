@@ -4,10 +4,6 @@ export const mockArticleCollection: Article.Entity[] = [
   {
     id: 'mock-article-id-1',
     slug: 'mock-article-slug-001',
-    image: {
-      url: 'https://picsum.photos/seed/picsum/200/300',
-      alt: ''
-    },
     title: '見出しテキスト見出しテキスト見出しテキスト見出しテキスト',
     description: '',
     createdAt: '2022-05-23T12:40:40.529Z',
@@ -34,10 +30,7 @@ export const mockArticleCollection: Article.Entity[] = [
   {
     id: 'mock-article-id-2',
     slug: 'mock-article-slug-002',
-    image: {
-      url: 'https://picsum.photos/id/20/200/300',
-      alt: ''
-    },
+
     title: '見出しテキスト見出しテキスト見出しテキスト見出しテキスト',
     category: {
       id: 'mock-category-id-2',
@@ -69,10 +62,6 @@ export const mockArticleCollection: Article.Entity[] = [
   {
     id: 'mock-article-id-3',
     slug: 'mock-article-slug-003',
-    image: {
-      url: 'https://picsum.photos/id/100/200/300',
-      alt: ''
-    },
     title: 'テキスト',
     category: {
       id: 'mock-category-id-3',

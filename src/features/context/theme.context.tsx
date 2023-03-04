@@ -12,35 +12,29 @@ import { darkTheme, lightTheme } from '@/styles/theme'
 type ColorMode = 'dark' | 'light'
 
 type ThemeContextValue = {
-  colorMode: ColorMode | null
+  colorMode: ColorMode
   // eslint-disable-next-line no-unused-vars
   handleChangeColorMode?: (colorMode: ColorMode) => void
 }
 
 const initContextValue: ThemeContextValue = {
-  colorMode: null,
+  colorMode: 'light',
   handleChangeColorMode: () => ({})
 }
 
 export const ThemeContext = createContext<ThemeContextValue>(initContextValue)
 
-export const ThemeContextProvider = ({
-  children,
-  mode
-}: {
-  mode?: ColorMode
-  children: ReactNode
-}) => {
-  const [colorMode, setColorMode] = useState<ColorMode | null>(mode ?? null)
+export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
+  const [colorMode, setColorMode] = useState<ColorMode>('light')
 
   useEffect(() => {
     setColorMode(
-      document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+      document.documentElement.classList.contains('light') ? 'light' : 'dark'
     )
   }, [])
 
   const handleChangeColorMode = useCallback((colorMode: ColorMode) => {
-    document.documentElement.classList.remove('light', 'dark')
+    document.documentElement.classList.remove('dark', 'light')
     document.documentElement.classList.add(colorMode)
     setColorMode(colorMode)
   }, [])

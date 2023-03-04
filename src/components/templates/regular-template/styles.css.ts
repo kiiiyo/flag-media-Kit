@@ -45,6 +45,9 @@ export const mainPane = style({
 
 export const asidePane = style({
   width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: globalToken.spacing.large,
   marginTop: globalToken.spacing.large,
   '@media': {
     [mediaQueries.tablet]: {

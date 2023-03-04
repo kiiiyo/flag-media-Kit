@@ -21,8 +21,8 @@ export const Header = () => {
           {/* Brand */}
           <Link href="/" className={styles.brandAnker}>
             <div className={styles.brandContainer}>
-              <div className={styles.brandSymbol}>🏁</div>
-              <div className={styles.brandName}>FlagMediaKit</div>
+              <div className={styles.brandSymbol}>🚀</div>
+              <div className={styles.brandName}>SpaceMediaKit</div>
             </div>
           </Link>
           <div className={styles.actionContainer}>

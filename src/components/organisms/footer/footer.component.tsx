@@ -10,8 +10,8 @@ export const Footer = () => {
           {/* Brand */}
           <div className={styles.brandContainer}>
             <div className={styles.brandGroup}>
-              <div className={styles.brandSymbol}>🏁</div>
-              <div className={styles.brandName}>FlagMediaKit</div>
+              <div className={styles.brandSymbol}>🚀</div>
+              <div className={styles.brandName}>SpaceMediaKit</div>
             </div>
             <p className={styles.brandDescription}>サイトの概要</p>
           </div>

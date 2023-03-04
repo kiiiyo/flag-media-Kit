@@ -1,7 +1,7 @@
 import { Head, Html, Main, NextScript } from 'next/document'
 
 const CustomDocument = () => {
-  const title = '🏁Flag Media Kit'
+  const title = '🚀 Space Media Kit'
 
   return (
     <Html className="light">
