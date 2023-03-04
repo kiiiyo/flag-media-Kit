@@ -10,7 +10,7 @@ export type Entity = {
   readonly title: string
   readonly description?: string | null
   //FIXME:
-  readonly imageUrl?: string
+  readonly imageUrl?: string | null
   readonly category?: Category.Entity | null
   readonly tags?: Tag.Entity[]
   readonly author?: Author.Entity

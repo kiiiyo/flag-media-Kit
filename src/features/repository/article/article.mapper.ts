@@ -18,7 +18,7 @@ export function articleMapper(contents: Args): Domain.Article.Entity[] {
       author: {
         name: '執筆者'
       },
-      imageUrl: content.imageUrl || undefined,
+      imageUrl: content.imageUrl || null,
       createdAt: content.createdAt,
       updatedAt: content.updatedAt,
       publishedAt: content.publishedAt
