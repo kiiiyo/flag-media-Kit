@@ -1,21 +1,17 @@
-import Link from 'next/link'
+import { TagIcon } from '@heroicons/react/24/solid'
 
-import { Atoms, Organisms, Templates } from '@/components'
+import { Organisms, Templates } from '@/components'
 
 export const TagCollectionPage = () => {
   return (
-    <Templates.SingleColumnTemplate
+    <Templates.CollectionTemplate
       headerPane={<Organisms.Header />}
       footerPane={<Organisms.Footer />}
+      pageHeader={
+        <Organisms.CollectionPageHeader title="タイプ" icon={<TagIcon />} />
+      }
     >
-      <Atoms.Skeleton kind="blue" style={{ height: '160px' }}>
-        Page Header
-      </Atoms.Skeleton>
-      <Link href="/tags/slag">
-        <Atoms.Skeleton kind="pink" style={{ height: '320px', marginTop: 24 }}>
-          Tag List
-        </Atoms.Skeleton>
-      </Link>
-    </Templates.SingleColumnTemplate>
+      <Organisms.TagCollection />
+    </Templates.CollectionTemplate>
   )
 }
