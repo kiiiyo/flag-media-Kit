@@ -10,3 +10,14 @@ export type Entity = {
   readonly updatedAt?: string
   readonly publishedAt?: string
 }
+
+/**
+ * Article Collection Response
+ */
+
+export type CollectionResponse = {
+  tags: Entity[]
+  totalCount: number
+  offset: number
+  limit: number
+}
