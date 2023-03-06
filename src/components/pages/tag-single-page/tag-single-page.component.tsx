@@ -1,24 +1,32 @@
-import Link from 'next/link'
+import { TagIcon } from '@heroicons/react/24/solid'
 
-import { Atoms, Organisms, Templates } from '@/components'
+import { Organisms, Templates } from '@/components'
+
+import { mockArticleCollection } from '../../organisms/article-collection/testing/'
 
 export const TagSinglePage = () => {
   return (
-    <Templates.SingleColumnTemplate
+    <Templates.CollectionSingleTemplate
       headerPane={<Organisms.Header />}
       footerPane={<Organisms.Footer />}
+      pageHeader={
+        <Organisms.CollectionPageHeader
+          title="タイプ:〇〇"
+          icon={<TagIcon />}
+        />
+      }
+      asidePane={
+        <>
+          <Organisms.AsideShare />
+        </>
+      }
     >
-      <Atoms.Skeleton kind="blue" style={{ height: '160px' }}>
-        Page Header
-      </Atoms.Skeleton>
-      <Link href="/articles/slag">
-        <Atoms.Skeleton kind="pink" style={{ height: '320px', marginTop: 24 }}>
-          Article List
-        </Atoms.Skeleton>
-      </Link>
-      <Atoms.Skeleton kind="blue" style={{ height: '48px', marginTop: 24 }}>
-        Pagination
-      </Atoms.Skeleton>
-    </Templates.SingleColumnTemplate>
+      {mockArticleCollection.length > 0 && (
+        <Organisms.ArticleCollection articles={mockArticleCollection} />
+      )}
+      <div style={{ marginTop: 40 }}>
+        <Organisms.Pagination isDisableNext={true} isDisablePrevious={true} />
+      </div>
+    </Templates.CollectionSingleTemplate>
   )
 }
