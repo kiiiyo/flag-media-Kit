@@ -5,8 +5,8 @@ export const fetchCategories: () => Promise<Domain.Category.CollectionResponse> 
     return await Repository.Category.fetchCategories()
   }
 
-// export const fetchTag: (
-//   id: string
-// ) => Promise<Domain.Tag.SingleResponse> = async (id: string) => {
-//   return await Repository.Tag.fetchTag(id)
-// }
+export const fetchCategory: (
+  id: string
+) => Promise<Domain.Category.SingleResponse> = async (id: string) => {
+  return await Repository.Category.fetchCategory(id)
+}

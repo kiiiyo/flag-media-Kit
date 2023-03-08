@@ -25,3 +25,18 @@ export const fetchCategories: () => Promise<Domain.Category.CollectionResponse> 
       }
     }
   }
+
+export const fetchCategory: (
+  id: string
+) => Promise<Domain.Category.SingleResponse> = async (id: string) => {
+  const response = await apiClient.getListDetail<CategoryContent>({
+    endpoint: 'categories',
+    contentId: id
+  })
+
+  return {
+    data: {
+      category: response
+    }
+  }
+}

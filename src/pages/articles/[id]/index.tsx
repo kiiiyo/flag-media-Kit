@@ -4,7 +4,6 @@ import type {
   InferGetStaticPropsType,
   NextPage
 } from 'next'
-import { useRouter } from 'next/router'
 
 import { Pages } from '@/components'
 import { UseCase } from '@/features'
