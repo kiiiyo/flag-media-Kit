@@ -3,8 +3,6 @@ import { TagIcon } from '@heroicons/react/24/solid'
 import { Organisms, Templates } from '@/components'
 import { Domain } from '@/features'
 
-import { mockArticleCollection } from '../../organisms/article-collection/testing/'
-
 type Props = {
   tag: Domain.Tag.Entity
   articles: Domain.Article.Entity[]

@@ -2,34 +2,29 @@ import { FolderIcon } from '@heroicons/react/24/solid'
 import Link from 'next/link'
 
 import { Molecules } from '@/components'
+import { Domain } from '@/features'
 
 import * as styles from './styles.css'
 
-export const AsideCategory = () => {
+type Props = {
+  title: string
+  category?: Domain.Category.Entity
+}
+
+export const AsideCategory = ({ title, category }: Props) => {
   return (
-    <Molecules.Card title="カテゴリー" icon={<FolderIcon />}>
-      <ul className={styles.categoryGroup}>
-        <li className={styles.categoryItem}>
-          <Link href="#" className={styles.categoryAnker}>
-            テキスト
-          </Link>
-        </li>
-        <li className={styles.categoryItem}>
-          <Link href="#" className={styles.categoryAnker}>
-            テキスト
-          </Link>
-        </li>
-        <li className={styles.categoryItem}>
-          <Link href="#" className={styles.categoryAnker}>
-            テキスト
-          </Link>
-        </li>
-        <li className={styles.categoryItem}>
-          <Link href="#" className={styles.categoryAnker}>
-            テキスト
-          </Link>
-        </li>
-      </ul>
+    <Molecules.Card title={title} icon={<FolderIcon />}>
+      {category ? (
+        <ul className={styles.categoryGroup}>
+          <li className={styles.categoryItem}>
+            <Link href="#" className={styles.categoryAnker}>
+              テキスト
+            </Link>
+          </li>
+        </ul>
+      ) : (
+        <p>{title}が指定されていません</p>
+      )}
     </Molecules.Card>
   )
 }
