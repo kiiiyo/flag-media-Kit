@@ -1,20 +1,32 @@
 import { Organisms, Templates } from '@/components'
+import { Domain } from '@/features'
 
-export const ArticleSinglePage = () => {
+type Props = {
+  article: Domain.Article.Entity
+}
+
+export const ArticleSinglePage = ({ article }: Props) => {
+  const content = article.content || ''
+
   return (
     <Templates.CollectionSingleTemplate
       headerPane={<Organisms.Header />}
       footerPane={<Organisms.Footer />}
-      pageHeader={<Organisms.ArticlePageHeader title="ポケモン" />}
+      pageHeader={
+        <Organisms.ArticlePageHeader
+          title={article.title}
+          imageUrl={article.imageUrl}
+        />
+      }
       asidePane={
         <>
-          <Organisms.AsideCategory title="分類" />
-          <Organisms.AsideTag title="タイプ" />
+          <Organisms.AsideCategory title="分類" category={article.category} />
+          <Organisms.AsideTag title="タイプ" tags={article.tags} />
           <Organisms.AsideShare />
         </>
       }
     >
-      <Organisms.ArticlePageContent content="テキスト" />
+      <Organisms.ArticlePageContent content={content} />
       <div style={{ marginTop: 40 }}>
         <Organisms.Pagination isDisableNext={true} isDisablePrevious={true} />
       </div>

@@ -11,7 +11,7 @@ type Image = {
 
 type Props = {
   title: string
-  imageUrl?: string
+  imageUrl?: string | null
 }
 
 export function ArticlePageHeader({ title, imageUrl }: Props) {

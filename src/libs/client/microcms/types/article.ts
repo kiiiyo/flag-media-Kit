@@ -9,6 +9,7 @@ export type ArticleContent = {
   slug: string
   sortOrder: number
   description?: string
+  content?: string
   imageUrl?: string
   category: CategoryContent & MicroCMSListContent
   tags: TagContent[]

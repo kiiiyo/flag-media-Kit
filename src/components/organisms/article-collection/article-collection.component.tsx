@@ -17,23 +17,14 @@ export const ArticleCollection = ({ articles }: Props) => {
   return (
     <>
       {articles.map((article) => {
-        const {
-          id,
-          imageUrl,
-          slug,
-          title,
-          category,
-          tags,
-          author,
-          publishedAt
-        } = article
+        const { id, imageUrl, title, category, tags, author, publishedAt } =
+          article
+        const articleUrl = `/articles/${id}`
+
         return (
           <article key={id} className={styles.article}>
             <div className={styles.inner}>
-              <Link
-                href={`/articles/${slug}`}
-                className={styles.articleImageAnker}
-              >
+              <Link href={articleUrl} className={styles.articleImageAnker}>
                 <div className={styles.articleImageWrapper}>
                   {imageUrl ? (
                     <Image
@@ -51,7 +42,7 @@ export const ArticleCollection = ({ articles }: Props) => {
                 {category && (
                   <p className={styles.articleCategory}>
                     <Link
-                      href={`/categories/${category?.name}`}
+                      href={`/categories/${category?.id}`}
                       className={styles.articleCategoryAnker}
                     >
                       {category?.name}
@@ -59,7 +50,7 @@ export const ArticleCollection = ({ articles }: Props) => {
                   </p>
                 )}
                 <h1 className={styles.articleTitle}>
-                  <Link href="#" className={styles.articleTitleAnker}>
+                  <Link href={articleUrl} className={styles.articleTitleAnker}>
                     {title}
                   </Link>
                 </h1>
@@ -86,7 +77,7 @@ export const ArticleCollection = ({ articles }: Props) => {
                     {tags.map((tag) => (
                       <p key={tag.id} className={styles.articleTag}>
                         <Link
-                          href={`/tags/${tag.slug}`}
+                          href={`/tags/${tag.id}`}
                           className={styles.articleTagAnker}
                         >
                           <span>#</span>
