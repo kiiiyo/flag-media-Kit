@@ -1,8 +1,11 @@
 import { FolderIcon } from '@heroicons/react/24/solid'
 
 import { Organisms, Templates } from '@/components'
+import { Domain } from '@/features'
 
-export const CategoryCollectionPage = () => {
+type Props = { categories: Domain.Category.Entity[] }
+
+export const CategoryCollectionPage = ({ categories }: Props) => {
   return (
     <Templates.CollectionTemplate
       headerPane={<Organisms.Header />}
@@ -11,7 +14,7 @@ export const CategoryCollectionPage = () => {
         <Organisms.CollectionPageHeader title="分類" icon={<FolderIcon />} />
       }
     >
-      <Organisms.CategoryCollection />
+      <Organisms.CategoryCollection categories={categories} />
     </Templates.CollectionTemplate>
   )
 }
