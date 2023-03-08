@@ -5,9 +5,12 @@ import { Domain } from '@/features'
 
 import { mockArticleCollection } from '../../organisms/article-collection/testing/'
 
-type Props = { tag: Domain.Tag.Entity }
+type Props = {
+  tag: Domain.Tag.Entity
+  articles: Domain.Article.Entity[]
+}
 
-export const TagSinglePage = ({ tag }: Props) => {
+export const TagSinglePage = ({ tag, articles }: Props) => {
   return (
     <Templates.CollectionSingleTemplate
       headerPane={<Organisms.Header />}
@@ -24,8 +27,8 @@ export const TagSinglePage = ({ tag }: Props) => {
         </>
       }
     >
-      {mockArticleCollection.length > 0 && (
-        <Organisms.ArticleCollection articles={mockArticleCollection} />
+      {articles.length > 0 && (
+        <Organisms.ArticleCollection articles={articles} />
       )}
       <div style={{ marginTop: 40 }}>
         <Organisms.Pagination isDisableNext={true} isDisablePrevious={true} />

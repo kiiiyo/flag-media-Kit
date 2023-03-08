@@ -7,6 +7,7 @@ export type ArticleContent = {
   id: string
   title: string
   slug: string
+  sortOrder: number
   description?: string
   imageUrl?: string
   category: CategoryContent & MicroCMSListContent

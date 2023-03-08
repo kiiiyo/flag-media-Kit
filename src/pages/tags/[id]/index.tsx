@@ -31,19 +31,24 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const id = params?.id
   // TODO: Error handling
-  const { data } = await UseCase.Tag.fetchTag(id)
-
+  const {
+    data: { tag }
+  } = await UseCase.Tag.fetchTag(id)
+  const {
+    data: { articles }
+  } = await UseCase.Article.fetchArticlesWithTag(id)
   return {
     props: {
-      tag: data.tag
+      tag,
+      articles
     }
   }
 }
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
-const TagSinglePage: NextPage<PageProps> = ({ tag }: PageProps) => {
-  return <Pages.TagSinglePage tag={tag} />
+const TagSinglePage: NextPage<PageProps> = ({ tag, articles }: PageProps) => {
+  return <Pages.TagSinglePage tag={tag} articles={articles} />
 }
 
 export default TagSinglePage

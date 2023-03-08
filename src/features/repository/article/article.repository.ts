@@ -10,9 +10,30 @@ export const fetchArticles: () => Promise<Domain.Article.CollectionResponse> =
       endpoint: 'articles'
     })
     return {
+      data: {
+        articles: articleMapper(response.contents),
+        totalCount: response.totalCount,
+        offset: response.offset,
+        limit: response.limit
+      }
+    }
+  }
+
+export const fetchArticlesWithTag: (
+  tagId: string
+) => Promise<Domain.Article.CollectionResponse> = async (tagId: string) => {
+  const response = await apiClient.getList<ArticleContent>({
+    endpoint: 'articles',
+    queries: {
+      filters: `tags[contains]${tagId}`
+    }
+  })
+  return {
+    data: {
       articles: articleMapper(response.contents),
       totalCount: response.totalCount,
       offset: response.offset,
       limit: response.limit
     }
   }
+}
