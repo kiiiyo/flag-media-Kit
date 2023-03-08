@@ -16,8 +16,18 @@ export type Entity = {
  */
 
 export type CollectionResponse = {
-  tags: Entity[]
-  totalCount: number
-  offset: number
-  limit: number
+  data: {
+    tags: Entity[]
+    totalCount: number
+    offset: number
+    limit: number
+  }
+  error?: null
+}
+
+export type SingleResponse = {
+  data: {
+    tag: Entity | null
+  }
+  error?: null
 }

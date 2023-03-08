@@ -9,13 +9,31 @@ export const fetchTags: () => Promise<Domain.Tag.CollectionResponse> =
     const response = await apiClient.getList<TagContent>({
       endpoint: 'tags',
       queries: {
-        orders: '-publishedAt'
+        limit: 20,
+        orders: 'sortOrder'
       }
     })
     return {
-      tags: tagMapper(response.contents),
-      totalCount: response.totalCount,
-      offset: response.offset,
-      limit: response.limit
+      data: {
+        tags: tagMapper(response.contents),
+        totalCount: response.totalCount,
+        offset: response.offset,
+        limit: response.limit
+      }
     }
   }
+
+export const fetchTag: (
+  id: string
+) => Promise<Domain.Tag.SingleResponse> = async (id: string) => {
+  const response = await apiClient.getListDetail<TagContent>({
+    endpoint: 'tags',
+    contentId: id
+  })
+
+  return {
+    data: {
+      tag: response
+    }
+  }
+}

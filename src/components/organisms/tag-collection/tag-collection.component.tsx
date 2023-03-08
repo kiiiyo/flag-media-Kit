@@ -13,10 +13,10 @@ export const TagCollection = ({ tags }: Props) => {
     <div className={styles.container}>
       <ul className={styles.group}>
         {tags.map((tag) => {
-          const { id, name, slug } = tag
+          const { id, name } = tag
           return (
             <li key={id} className={styles.groupItem}>
-              <Link href={`/tags/${slug}`} className={styles.groupItemAnker}>
+              <Link href={`/tags/${id}`} className={styles.groupItemAnker}>
                 {name}
               </Link>
             </li>
