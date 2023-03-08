@@ -1,4 +1,5 @@
 export * from './article-page'
+export * from './article-single-page'
 export * from './author-page'
 export * from './category-collection-page'
 export * from './category-single-page'

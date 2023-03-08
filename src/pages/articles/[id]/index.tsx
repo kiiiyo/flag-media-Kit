@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import { Pages } from '@/components'
 
 const ArticlePage: NextPage = () => {
-  return <Pages.ArticlePage />
+  return <Pages.ArticleSinglePage />
 }
 
 export default ArticlePage

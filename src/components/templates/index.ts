@@ -1,3 +1,4 @@
+export * from './article-single-template'
 export * from './collection-single-template'
 export * from './collection-template'
 export * from './general-template'
