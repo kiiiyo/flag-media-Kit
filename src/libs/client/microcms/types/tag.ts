@@ -4,6 +4,7 @@ export type TagContent = {
   id: string
   name: string
   slug: string
+  sortOrder: number
   imageUrl?: string
   description?: string
 } & MicroCMSDate

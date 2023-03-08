@@ -24,8 +24,11 @@ export type Entity = {
  */
 
 export type CollectionResponse = {
-  articles: Entity[]
-  totalCount: number
-  offset: number
-  limit: number
+  data: {
+    articles: Entity[]
+    totalCount: number
+    offset: number
+    limit: number
+  }
+  error?: null
 }

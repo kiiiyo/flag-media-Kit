@@ -8,11 +8,13 @@ type StaticProps = {
 }
 
 export const getStaticProps: GetStaticProps<StaticProps> = async () => {
-  const response = await UseCase.Article.fetchArticles()
+  const {
+    data: { articles }
+  } = await UseCase.Article.fetchArticles()
 
   return {
     props: {
-      articles: response.articles
+      articles
     }
   }
 }
