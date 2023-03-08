@@ -9,6 +9,7 @@ export type Entity = {
   readonly slug: string
   readonly title: string
   readonly description?: string | null
+  readonly content?: string | null
   //FIXME:
   readonly imageUrl?: string | null
   readonly category?: Category.Entity | null
@@ -29,6 +30,13 @@ export type CollectionResponse = {
     totalCount: number
     offset: number
     limit: number
+  }
+  error?: null
+}
+
+export type SingleResponse = {
+  data: {
+    article: Entity | null
   }
   error?: null
 }

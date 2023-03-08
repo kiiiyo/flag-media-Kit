@@ -5,7 +5,8 @@ import { globalToken, semanticToken } from '@/styles/theme'
 export const articleTagGroup = style({
   display: 'flex',
   flexWrap: 'wrap',
-  paddingTop: globalToken.spacing.small,
+  minHeight: 48,
+  alignItems: 'center',
   gap: globalToken.spacing.small
 })
 
@@ -27,5 +28,15 @@ export const articleTagAnker = style({
   textDecoration: 'none',
   display: 'flex',
   color: semanticToken.font.color.subtle,
-  fontSize: 12
+  fontSize: 12,
+  backgroundColor: semanticToken.surface.default.bgColor.normal,
+  ':any-link': {
+    backgroundColor: semanticToken.surface.default.bgColor.normal
+  },
+  ':hover': {
+    backgroundColor: semanticToken.surface.default.bgColor.hovered
+  },
+  ':active': {
+    backgroundColor: semanticToken.surface.default.bgColor.pressed
+  }
 })

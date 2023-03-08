@@ -4,7 +4,10 @@ import { globalToken, semanticToken } from '@/styles/theme'
 
 export const categoryGroup = style({
   margin: globalToken.spacing.none,
-  padding: globalToken.spacing.none,
+  paddingTop: globalToken.spacing.small,
+  paddingBottom: globalToken.spacing.small,
+  paddingLeft: globalToken.spacing.none,
+  paddingRight: globalToken.spacing.none,
   listStyle: 'none'
 })
 

@@ -11,7 +11,8 @@ export function articleMapper(contents: Args): Domain.Article.Entity[] {
       id: content.id,
       slug: content.slug,
       title: content.title,
-      description: '',
+      description: content.description || '',
+      content: content.content || '',
       category: categoryMapper(content.category),
       tags: tagMapper(content.tags),
       // FIXME:

@@ -8,7 +8,7 @@ import * as styles from './styles.css'
 
 type Props = {
   title: string
-  category?: Domain.Category.Entity
+  category?: Domain.Category.Entity | null
 }
 
 export const AsideCategory = ({ title, category }: Props) => {
@@ -17,8 +17,11 @@ export const AsideCategory = ({ title, category }: Props) => {
       {category ? (
         <ul className={styles.categoryGroup}>
           <li className={styles.categoryItem}>
-            <Link href="#" className={styles.categoryAnker}>
-              テキスト
+            <Link
+              href={`/categories/${category.id}`}
+              className={styles.categoryAnker}
+            >
+              {category.name}
             </Link>
           </li>
         </ul>

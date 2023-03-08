@@ -37,3 +37,17 @@ export const fetchArticlesWithTag: (
     }
   }
 }
+
+export const fetchArticle: (
+  id: string
+) => Promise<Domain.Article.SingleResponse> = async (id: string) => {
+  const response = await apiClient.getListDetail<ArticleContent>({
+    endpoint: 'articles',
+    contentId: id
+  })
+  return {
+    data: {
+      article: articleMapper([response])[0]
+    }
+  }
+}

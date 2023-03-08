@@ -10,3 +10,9 @@ export const fetchArticlesWithTag: (
 ) => Promise<Domain.Article.CollectionResponse> = async (tagId: string) => {
   return await Repository.Article.fetchArticlesWithTag(tagId)
 }
+
+export const fetchArticle: (
+  id: string
+) => Promise<Domain.Article.SingleResponse> = async (id: string) => {
+  return await Repository.Article.fetchArticle(id)
+}
