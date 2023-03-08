@@ -10,3 +10,24 @@ export type Entity = {
   readonly updatedAt?: string
   readonly publishedAt?: string
 }
+
+/**
+ * Response
+ */
+
+export type CollectionResponse = {
+  data: {
+    categories: Entity[]
+    totalCount: number
+    offset: number
+    limit: number
+  }
+  error?: null
+}
+
+export type SingleResponse = {
+  data: {
+    category: Entity | null
+  }
+  error?: null
+}

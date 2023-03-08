@@ -12,7 +12,7 @@ export type Entity = {
 }
 
 /**
- * Article Collection Response
+ * Response
  */
 
 export type CollectionResponse = {

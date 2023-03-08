@@ -14,7 +14,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: 'blocking'
   }
 }
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (params === undefined || typeof params.id !== 'string')
     throw Error('NotFound Article')
@@ -22,20 +21,27 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const id = params?.id
   // TODO: Error handling
   const {
-    data: { article }
-  } = await UseCase.Article.fetchArticle(id)
+    data: { category }
+  } = await UseCase.Category.fetchCategory(id)
+  const {
+    data: { articles }
+  } = await UseCase.Article.fetchArticlesWithCategory(id)
 
   return {
     props: {
-      article
+      category,
+      articles
     }
   }
 }
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
-const ArticlePage: NextPage<PageProps> = ({ article }: PageProps) => {
-  return <Pages.ArticleSinglePage article={article} />
+const CategorySinglePage: NextPage<PageProps> = ({
+  category,
+  articles
+}: PageProps) => {
+  return <Pages.CategorySinglePage category={category} articles={articles} />
 }
 
-export default ArticlePage
+export default CategorySinglePage

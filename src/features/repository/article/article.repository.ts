@@ -19,6 +19,20 @@ export const fetchArticles: () => Promise<Domain.Article.CollectionResponse> =
     }
   }
 
+export const fetchArticle: (
+  id: string
+) => Promise<Domain.Article.SingleResponse> = async (id: string) => {
+  const response = await apiClient.getListDetail<ArticleContent>({
+    endpoint: 'articles',
+    contentId: id
+  })
+  return {
+    data: {
+      article: articleMapper([response])[0]
+    }
+  }
+}
+
 export const fetchArticlesWithTag: (
   tagId: string
 ) => Promise<Domain.Article.CollectionResponse> = async (tagId: string) => {
@@ -38,16 +52,24 @@ export const fetchArticlesWithTag: (
   }
 }
 
-export const fetchArticle: (
-  id: string
-) => Promise<Domain.Article.SingleResponse> = async (id: string) => {
-  const response = await apiClient.getListDetail<ArticleContent>({
+export const fetchArticlesWithCategory: (
+  categoryId: string
+) => Promise<Domain.Article.CollectionResponse> = async (
+  categoryId: string
+) => {
+  const response = await apiClient.getList<ArticleContent>({
     endpoint: 'articles',
-    contentId: id
+    queries: {
+      filters: `category[equals]${categoryId}`
+    }
   })
+
   return {
     data: {
-      article: articleMapper([response])[0]
+      articles: articleMapper(response.contents),
+      totalCount: response.totalCount,
+      offset: response.offset,
+      limit: response.limit
     }
   }
 }
