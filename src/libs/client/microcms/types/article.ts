@@ -3,7 +3,7 @@ import { MicroCMSDate, MicroCMSListContent } from 'microcms-js-sdk'
 import { CategoryContent } from './category'
 import { TagContent } from './tag'
 
-export type ArticleContent = {
+export type Entity = {
   id: string
   title: string
   slug: string
@@ -14,3 +14,8 @@ export type ArticleContent = {
   category: CategoryContent & MicroCMSListContent
   tags: TagContent[]
 } & MicroCMSDate
+
+export type ArticleContent = {
+  previousArticle?: Entity | null
+  nextArticle?: Entity | null
+} & Entity

@@ -29,7 +29,7 @@ export const TagSinglePage = ({ tag, articles }: Props) => {
         <Organisms.ArticleCollection articles={articles} />
       )}
       <div style={{ marginTop: 40 }}>
-        <Organisms.Pagination isDisableNext={true} isDisablePrevious={true} />
+        <Organisms.Pagination isEnableNext={false} isEnablePrevious={false} />
       </div>
     </Templates.CollectionSingleTemplate>
   )
