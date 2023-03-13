@@ -8,8 +8,8 @@ type Props = {
 export const ArticleSinglePage = ({ article }: Props) => {
   // TODO:
   const content = article.content || ''
-  const isEnablePrevious = !article.previousArticle ?? true
-  const isEnableNext = !article.nextArticle ?? true
+  const isEnablePrevious = article.previousArticle ? true : false
+  const isEnableNext = article.nextArticle ? true : false
   const previousLink = article.previousArticle
     ? `/articles/${article.previousArticle.id}`
     : null

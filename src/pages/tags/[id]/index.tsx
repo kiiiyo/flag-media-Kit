@@ -8,21 +8,11 @@ import type {
 import { Pages } from '@/components'
 import { UseCase } from '@/features'
 
-export const getAllSlugPaths = async () => {
-  const {
-    data: { tags }
-  } = await UseCase.Tag.fetchTags()
-  const paths = tags.map((tag) => ({
-    params: {
-      id: tag.id
-    }
-  }))
-  return paths
-}
-
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = await getAllSlugPaths()
-  return { paths, fallback: false }
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

@@ -22,8 +22,8 @@ export default {
 
 export const Default: Story = {
   args: {
-    isDisableNext: false,
-    isDisablePrevious: false,
+    isEnableNext: false,
+    isEnablePrevious: false,
     totalPageCount: 1,
     currentPageCount: 1,
     previousLink: '#',
