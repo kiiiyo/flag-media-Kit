@@ -6,7 +6,16 @@ type Props = {
 }
 
 export const ArticleSinglePage = ({ article }: Props) => {
+  // TODO:
   const content = article.content || ''
+  const isEnablePrevious = !article.previousArticle ?? true
+  const isEnableNext = !article.nextArticle ?? true
+  const previousLink = article.previousArticle
+    ? `/articles/${article.previousArticle.id}`
+    : null
+  const nextLink = article.nextArticle
+    ? `/articles/${article.nextArticle.id}`
+    : null
 
   return (
     <Templates.CollectionSingleTemplate
@@ -28,7 +37,12 @@ export const ArticleSinglePage = ({ article }: Props) => {
     >
       <Organisms.ArticlePageContent content={content} />
       <div style={{ marginTop: 40 }}>
-        <Organisms.Pagination isDisableNext={true} isDisablePrevious={true} />
+        <Organisms.Pagination
+          isEnablePrevious={isEnablePrevious}
+          isEnableNext={isEnableNext}
+          previousLink={previousLink}
+          nextLink={nextLink}
+        />
       </div>
     </Templates.CollectionSingleTemplate>
   )

@@ -4,42 +4,44 @@ import Link from 'next/link'
 import * as styles from './styles.css'
 
 type Props = {
-  isDisablePrevious: boolean
-  isDisableNext: boolean
-  previousLink?: string
-  nextLink?: string
+  isEnablePrevious: boolean
+  isEnableNext: boolean
+  previousLink?: string | null
+  nextLink?: string | null
   currentPageCount?: number
   totalPageCount?: number
 }
 
 export const Pagination = ({
-  isDisablePrevious,
-  isDisableNext,
+  isEnablePrevious,
+  isEnableNext,
   previousLink,
   nextLink,
-  currentPageCount = 1,
-  totalPageCount = 1
+  currentPageCount,
+  totalPageCount
 }: Props) => {
   return (
     <div className={styles.root}>
       <Link
         href={previousLink ?? '#'}
         className={`${styles.paginationAnker} ${styles.paginationPrevious} ${
-          isDisablePrevious ? styles.paginationAnkerDisabled : ''
+          !isEnablePrevious ? styles.paginationAnkerDisabled : ''
         }`}
       >
         <ArrowLeftIcon className={styles.paginationAnkerIcon} />
         <span>Previous</span>
       </Link>
-      <div className={styles.paginationCounter}>
-        <span>{currentPageCount}</span>
-        <span>/</span>
-        <span>{totalPageCount}</span>
-      </div>
+      {currentPageCount && totalPageCount && (
+        <div className={styles.paginationCounter}>
+          <span>{currentPageCount}</span>
+          <span>/</span>
+          <span>{totalPageCount}</span>
+        </div>
+      )}
       <Link
         href={nextLink ?? '#'}
         className={`${styles.paginationAnker} ${styles.paginationNext} ${
-          isDisableNext ? styles.paginationAnkerDisabled : ''
+          !isEnableNext ? styles.paginationAnkerDisabled : ''
         }`}
       >
         <span>Next</span>

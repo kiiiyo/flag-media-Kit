@@ -22,7 +22,19 @@ export function articleMapper(contents: Args): Domain.Article.Entity[] {
       imageUrl: content.imageUrl || null,
       createdAt: content.createdAt,
       updatedAt: content.updatedAt,
-      publishedAt: content.publishedAt
+      publishedAt: content.publishedAt,
+      previousArticle: content.previousArticle
+        ? {
+            id: content.previousArticle.id,
+            title: content.previousArticle.title
+          }
+        : null,
+      nextArticle: content.nextArticle
+        ? {
+            id: content.nextArticle.id,
+            title: content.nextArticle.title
+          }
+        : null
     }
   })
 }

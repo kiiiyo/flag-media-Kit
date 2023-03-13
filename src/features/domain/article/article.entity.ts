@@ -18,6 +18,13 @@ export type Entity = {
   readonly createdAt: string
   readonly updatedAt: string
   readonly publishedAt?: string
+  readonly nextArticle?: RelationArticle | null
+  readonly previousArticle?: RelationArticle | null
+}
+
+export type RelationArticle = {
+  id: string
+  title: string
 }
 
 /**
