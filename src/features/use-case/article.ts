@@ -25,3 +25,9 @@ export const fetchArticlesWithCategory: (
 ) => {
   return await Repository.Article.fetchArticlesWithCategory(categoryId)
 }
+
+export const searchArticles: (
+  keyword: string
+) => Promise<Domain.Article.CollectionResponse> = async (keyword: string) => {
+  return await Repository.Article.searchArticles(keyword)
+}

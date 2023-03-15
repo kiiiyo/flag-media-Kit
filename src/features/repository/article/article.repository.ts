@@ -81,3 +81,23 @@ export const fetchArticlesWithCategory: (
     }
   }
 }
+
+export const searchArticles: (
+  keyword: string
+) => Promise<Domain.Article.CollectionResponse> = async (keyword: string) => {
+  console.log(keyword)
+  const response = await apiClient.getList<ArticleContent>({
+    endpoint: 'articles',
+    queries: {
+      q: keyword
+    }
+  })
+  return {
+    data: {
+      articles: articleMapper(response.contents),
+      totalCount: response.totalCount,
+      offset: response.offset,
+      limit: response.limit
+    }
+  }
+}
