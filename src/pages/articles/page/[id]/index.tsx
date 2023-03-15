@@ -9,13 +9,39 @@ type StaticProps = {
   currentPageCount: number
 }
 
-export const getStaticProps: GetStaticProps<StaticProps> = async () => {
+export const getStaticPaths = async () => {
   const perPage = 3
+  const {
+    data: { totalCount }
+  } = await UseCase.Article.fetchArticles({
+    sortOrder: 'asc'
+  })
+
+  const range = (start: number, end: number) =>
+    [...Array(end - start + 1)].map((_, i) => start + i)
+
+  const paths = range(1, Math.ceil(totalCount / perPage)).map(
+    (repo) => `/articles/page/${repo}`
+  )
+
+  return { paths, fallback: false }
+}
+
+export const getStaticProps: GetStaticProps<StaticProps> = async ({
+  params
+}) => {
+  const perPage = 3
+
+  // TODO: Add test code
+  const pageId =
+    typeof params?.id === 'string' && !isNaN(Number(params?.id))
+      ? Number(params?.id)
+      : 1
 
   const {
     data: { articles, totalCount }
   } = await UseCase.Article.fetchArticles({
-    offset: 0,
+    offset: (pageId - 1) * perPage,
     limit: perPage,
     sortOrder: 'asc'
   })
@@ -23,7 +49,7 @@ export const getStaticProps: GetStaticProps<StaticProps> = async () => {
   return {
     props: {
       articles,
-      currentPageCount: 1,
+      currentPageCount: pageId,
       totalPageCount: Math.ceil(totalCount / perPage)
     }
   }
@@ -31,7 +57,7 @@ export const getStaticProps: GetStaticProps<StaticProps> = async () => {
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
-export const HomePage: NextPage<PageProps> = ({
+export const ArticleCollectionPage: NextPage<PageProps> = ({
   articles,
   currentPageCount,
   totalPageCount
@@ -45,4 +71,4 @@ export const HomePage: NextPage<PageProps> = ({
   )
 }
 
-export default HomePage
+export default ArticleCollectionPage

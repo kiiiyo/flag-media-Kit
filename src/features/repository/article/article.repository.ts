@@ -4,20 +4,28 @@ import type { ArticleContent } from '@/libs/client/microcms/types'
 
 import { articleMapper } from './article.mapper'
 
-export const fetchArticles: () => Promise<Domain.Article.CollectionResponse> =
-  async () => {
-    const response = await apiClient.getList<ArticleContent>({
-      endpoint: 'articles'
-    })
-    return {
-      data: {
-        articles: articleMapper(response.contents),
-        totalCount: response.totalCount,
-        offset: response.offset,
-        limit: response.limit
-      }
+export const fetchArticles: (
+  queries: Domain.Article.CollectionQueries
+) => Promise<Domain.Article.CollectionResponse> = async (
+  queries: Domain.Article.CollectionQueries
+) => {
+  const response = await apiClient.getList<ArticleContent>({
+    endpoint: 'articles',
+    queries: {
+      offset: queries.offset,
+      limit: queries.limit,
+      orders: queries.sortOrder === 'asc' ? 'sortOrder' : '-sortOrder'
+    }
+  })
+  return {
+    data: {
+      articles: articleMapper(response.contents),
+      totalCount: response.totalCount,
+      offset: response.offset,
+      limit: response.limit
     }
   }
+}
 
 export const fetchArticle: (
   id: string
