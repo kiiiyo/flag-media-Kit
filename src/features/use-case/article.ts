@@ -1,9 +1,10 @@
 import { Domain, Repository } from '@/features'
 
-export const fetchArticles: () => Promise<Domain.Article.CollectionResponse> =
-  async () => {
-    return await Repository.Article.fetchArticles()
-  }
+export const fetchArticles: (
+  queries: Domain.Article.CollectionQueries
+) => Promise<Domain.Article.CollectionResponse> = async (queries) => {
+  return await Repository.Article.fetchArticles(queries)
+}
 
 export const fetchArticle: (
   id: string

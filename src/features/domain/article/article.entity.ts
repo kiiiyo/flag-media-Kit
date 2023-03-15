@@ -28,8 +28,14 @@ export type RelationArticle = {
 }
 
 /**
- * Article Collection Response
+ * Article Collection
  */
+
+export type CollectionQueries = {
+  offset?: number
+  limit?: number
+  sortOrder?: 'asc' | 'dec'
+}
 
 export type CollectionResponse = {
   data: {
@@ -40,6 +46,10 @@ export type CollectionResponse = {
   }
   error?: null
 }
+
+/**
+ * Article Single
+ */
 
 export type SingleResponse = {
   data: {
