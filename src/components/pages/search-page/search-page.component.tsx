@@ -1,17 +1,21 @@
-import { Atoms, Organisms, Templates } from '@/components'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
+
+import { Molecules, Organisms, Templates } from '@/components'
+
+import { mockArticleCollection } from '../../organisms/article-collection/testing/'
 
 export const SearchPage = () => {
   return (
-    <Templates.SingleColumnTemplate
+    <Templates.CollectionTemplate
       headerPane={<Organisms.Header />}
       footerPane={<Organisms.Footer />}
+      pageHeader={<Organisms.SearchForm />}
     >
-      <Atoms.Skeleton kind="pink" style={{ height: '320px' }}>
-        Search Form
-      </Atoms.Skeleton>
-      <Atoms.Skeleton kind="blue" style={{ height: '320px', marginTop: 24 }}>
-        Search Result Pane
-      </Atoms.Skeleton>
-    </Templates.SingleColumnTemplate>
+      <Molecules.GeneralMessage
+        icon={<MagnifyingGlassIcon />}
+        title="記事の検索"
+        description="キーワードを入力し記事を検索"
+      />
+    </Templates.CollectionTemplate>
   )
 }
