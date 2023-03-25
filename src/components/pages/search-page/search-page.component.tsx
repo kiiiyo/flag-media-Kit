@@ -21,7 +21,7 @@ export const SearchPage = ({ keyword, articles, isLoading }: Props) => {
         <Molecules.GeneralMessage
           icon={<MagnifyingGlassIcon />}
           title="記事の検索"
-          description="キーワードを入力し記事を検索"
+          description="キーワードで記事を検索"
         />
       ) : keyword && isLoading ? (
         <Molecules.GeneralMessage
